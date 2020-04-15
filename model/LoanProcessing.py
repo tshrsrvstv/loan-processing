@@ -34,7 +34,6 @@ class PreProcessor():
             err = self.errObj.handleErr(str(exp))
             logger.error(str(err))
 
-    @classmethod
     def load_data(self, default_directory=DEFAULT_DIRECTORY):
         logger.info("In PreProcessor | load_data started")
         try:
@@ -46,6 +45,18 @@ class PreProcessor():
             logger.error(str(exp))
         logger.info("In PreProcessor | load_data finished")
         return df
+
+    def detect_categorical_columns(self, df):
+        logger.info("In PreProcessor | detect_categorical_columns started")
+        try:
+            logger.debug("In detect_categorical_columns | " + str(df.dtypes))
+        except Exception as exp:
+            err = self.errObj.handleErr(str(exp))
+            logger.error(str(exp))
+        logger.info("In PreProcessor | detect_categorical_columns finished")
+        return df.columns[df.dtypes == np.object]
+
+    def
 
 
 class VisualizeCorrelation():
@@ -77,7 +88,11 @@ class Outlier:
 
 def main():
     logger.info('Main Started')
-    df = PreProcessor().load_data()
+    preProcessor = PreProcessor()
+    df = preProcessor.load_data()
+    categorical_cols = preProcessor.detect_categorical_columns(df)
+    logger.info(categorical_cols)
+    del preProcessor
     logger.info('Main Finished')
 
 
