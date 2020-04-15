@@ -56,7 +56,23 @@ class PreProcessor():
         logger.info("In PreProcessor | detect_categorical_columns finished")
         return df.columns[df.dtypes == np.object]
 
-    def
+    def dimension_stat_analysis(self, df, categorical_cols):
+        logger.info("In PreProcessor | dimension_stat_analysis started")
+        try:
+            logger.info('Dataset shape : ' + str(df.shape))
+            non_categorical_cols = [col for col in df.columns if col not in categorical_cols]
+            for col in non_categorical_cols:
+                logger.info('Column Name : ' + str(col))
+                logger.info('Column Mean : ' + str(df[col].mean()))
+                logger.info('Column Median : ' + str(df[col].median()))
+                logger.info('Column Standard Deviation : ' + str(df[col].std()))
+                logger.info('Column Minima : ' + str(df[col].min()))
+                logger.info('Column Maxima : ' + str(df[col].max()))
+                logger.info('Column Quantile : ' + str(df[col].quantile([0.25, 0.5, 0.75])))
+        except Exception as exp:
+            err = self.errObj.handleErr(str(exp))
+            logger.error(str(exp))
+        logger.info("In PreProcessor | dimension_stat_analysis finished")
 
 
 class VisualizeCorrelation():
@@ -91,7 +107,8 @@ def main():
     preProcessor = PreProcessor()
     df = preProcessor.load_data()
     categorical_cols = preProcessor.detect_categorical_columns(df)
-    logger.info(categorical_cols)
+    logger.info('Categorical Columns in dataset : ' + str(categorical_cols))
+    preProcessor.dimension_stat_analysis(df, categorical_cols)
     del preProcessor
     logger.info('Main Finished')
 
