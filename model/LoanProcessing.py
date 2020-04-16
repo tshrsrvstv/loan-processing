@@ -16,7 +16,7 @@ from Logger import logger
 
 DEFAULT_DIRECTORY = os.path.join(os.sep.join(map(str, os.getcwd().split(os.sep)[:-1])), 'dataset')
 DATA_CSV_FILENAME = 'LoanApplyData-bank.csv'
-
+VISUALIZATION_SAVE_DIRECTORY = os.path.join(os.sep.join(map(str, os.getcwd().split(os.sep)[:-1])), 'visualizations')
 
 class ErrorHandler(object):
     def handleErr(self, err):
@@ -42,7 +42,7 @@ class PreProcessor():
             df = pd.read_csv(data_file)
         except Exception as exp:
             err = self.errObj.handleErr(str(exp))
-            logger.error(str(exp))
+            logger.error(str(err))
         logger.info("In PreProcessor | load_data finished")
         return df
 
@@ -52,7 +52,7 @@ class PreProcessor():
             logger.debug("In detect_categorical_columns | " + str(df.dtypes))
         except Exception as exp:
             err = self.errObj.handleErr(str(exp))
-            logger.error(str(exp))
+            logger.error(str(err))
         logger.info("In PreProcessor | detect_categorical_columns finished")
         return df.columns[df.dtypes == np.object]
 
@@ -71,7 +71,7 @@ class PreProcessor():
                 logger.info('Column Quantile : ' + str(df[col].quantile([0.25, 0.5, 0.75])))
         except Exception as exp:
             err = self.errObj.handleErr(str(exp))
-            logger.error(str(exp))
+            logger.error(str(err))
         logger.info("In PreProcessor | dimension_stat_analysis finished")
 
 
@@ -92,6 +92,60 @@ class MissingValue:
             err = self.errObj.handleErr(str(exp))
             logger.error(str(err))
 
+    def get_missing_values_info(self, df):
+        logger.info("In MissingValue | get_missing_values_info started")
+        info = {}
+        try:
+            for col in df.columns:
+                missing_val_count = df[col].isnull().sum()
+                total_row_count = df[col].shape[0]
+                logger.debug("Missing values in Column " + col + " : " + str(missing_val_count))
+                logger.debug("Total Entries in Column " + col + " : " + str(total_row_count))
+                info[col] = {
+                    'count': missing_val_count,
+                    'percentage': (missing_val_count / total_row_count) * 100
+                }
+        except Exception as exp:
+            err = self.errObj.handleErr(str(exp))
+            logger.error(str(err))
+        logger.info("In MissingValue | get_missing_values_info finished")
+        return info
+
+    def visualize_missing_values(self, df):
+        logger.info("In MissingValue | visualize_missing_values started")
+        try:
+            if not os.path.exists(VISUALIZATION_SAVE_DIRECTORY):
+                os.makedirs(VISUALIZATION_SAVE_DIRECTORY)
+            msno.matrix(df)
+            plt.ion()
+            plt.show()
+            plt.savefig(os.path.join(VISUALIZATION_SAVE_DIRECTORY, 'missing_number_matrix_visualization.png'))
+            plt.pause(1)
+            plt.close()
+            msno.bar(df)
+            plt.ion()
+            plt.show()
+            plt.savefig(os.path.join(VISUALIZATION_SAVE_DIRECTORY, 'missing_number_bar_chart.png'))
+            plt.pause(1)
+            plt.close()
+        except Exception as exp:
+            err = self.errObj.handleErr(str(exp))
+            logger.error(str(err))
+        logger.info("In MissingValue | visualize_missing_values finished")
+
+    def visualize_heatmap(self, df):
+        logger.info("In MissingValue | visualize_heatmap started")
+        try:
+            msno.heatmap(df)
+            plt.ion()
+            plt.show()
+            plt.savefig(os.path.join(VISUALIZATION_SAVE_DIRECTORY, 'correlation_heatmap.png'))
+            plt.pause(1)
+            plt.close()
+        except Exception as exp:
+            err = self.errObj.handleErr(str(exp))
+            logger.error(str(err))
+        logger.info("In MissingValue | visualize_heatmap finished")
 
 class Outlier:
     def __init__(self, parent=None):
@@ -104,12 +158,18 @@ class Outlier:
 
 def main():
     logger.info('Main Started')
-    preProcessor = PreProcessor()
-    df = preProcessor.load_data()
-    categorical_cols = preProcessor.detect_categorical_columns(df)
+    pre_process = PreProcessor()
+    df = pre_process.load_data()
+    categorical_cols = pre_process.detect_categorical_columns(df)
     logger.info('Categorical Columns in dataset : ' + str(categorical_cols))
-    preProcessor.dimension_stat_analysis(df, categorical_cols)
-    del preProcessor
+    pre_process.dimension_stat_analysis(df, categorical_cols)
+    del pre_process
+    missing_val = MissingValue()
+    missing_val_info = missing_val.get_missing_values_info(df)
+    missing_val.visualize_missing_values(df)
+    missing_val.visualize_heatmap(df)
+    logger.info('Column wise Missing Values in dataset : ' + str(missing_val_info))
+    del missing_val
     logger.info('Main Finished')
 
 
