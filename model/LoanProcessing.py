@@ -13,10 +13,15 @@ import missingno as msno
 from impyute.imputation.cs import mice
 from scipy import stats
 from Logger import logger
+from sklearn.preprocessing import LabelEncoder
+from EncoderStore import EncoderStore
 
 DEFAULT_DIRECTORY = os.path.join(os.sep.join(map(str, os.getcwd().split(os.sep)[:-1])), 'dataset')
-DATA_CSV_FILENAME = 'LoanApplyData-bank.csv'
+DATA_CSV_FILENAME = 'LoanApplyData-bank-EditedForTest.csv'
 VISUALIZATION_SAVE_DIRECTORY = os.path.join(os.sep.join(map(str, os.getcwd().split(os.sep)[:-1])), 'visualizations')
+COLUMNS_CATEGORIZATION_APPLICABLE = ['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'campaign',
+                                     'previous', 'poutcome', 'target']
+
 
 class ErrorHandler(object):
     def handleErr(self, err):
@@ -55,6 +60,23 @@ class PreProcessor():
             logger.error(str(err))
         logger.info("In PreProcessor | detect_categorical_columns finished")
         return df.columns[df.dtypes == np.object]
+
+    def convert_to_categorical_values(self, df, cat_cols):
+        logger.info("In PreProcessor | convert_to_categorical_values started")
+        try:
+            for col in cat_cols:
+                if col in COLUMNS_CATEGORIZATION_APPLICABLE:
+                    logger.debug('Categorizing Column : ' + str(col))
+                    encoder = LabelEncoder()
+                    logger.debug('Column unique value : ' + str(df[col].unique()))
+                    encoder.fit(df[col].unique())
+                    df[col] = encoder.fit_transform(df[col])
+                    EncoderStore.save(col, encoder)
+        except Exception as exp:
+            err = self.errObj.handleErr(str(exp))
+            logger.error(str(err))
+        logger.info("In PreProcessor | convert_to_categorical_values finished")
+        return df
 
     def dimension_stat_analysis(self, df, categorical_cols):
         logger.info("In PreProcessor | dimension_stat_analysis started")
@@ -147,6 +169,7 @@ class MissingValue:
             logger.error(str(err))
         logger.info("In MissingValue | visualize_heatmap finished")
 
+
 class Outlier:
     def __init__(self, parent=None):
         try:
@@ -163,6 +186,9 @@ def main():
     categorical_cols = pre_process.detect_categorical_columns(df)
     logger.info('Categorical Columns in dataset : ' + str(categorical_cols))
     pre_process.dimension_stat_analysis(df, categorical_cols)
+    pre_process.convert_to_categorical_values(df, categorical_cols)
+    logger.info('DataFrame After Categorical Column Label Encoding :')
+    logger.info(df.head())
     del pre_process
     missing_val = MissingValue()
     missing_val_info = missing_val.get_missing_values_info(df)
