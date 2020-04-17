@@ -16,6 +16,7 @@ from Logger import logger
 
 DEFAULT_DIRECTORY = os.path.join(os.sep.join(map(str, os.getcwd().split(os.sep)[:-1])), 'dataset')
 DATA_CSV_FILENAME = 'LoanApplyData-bank.csv'
+#DATA_CSV_FILENAME = 'LoanApplyData-bank-EditedForTest.csv'
 VISUALIZATION_SAVE_DIRECTORY = os.path.join(os.sep.join(map(str, os.getcwd().split(os.sep)[:-1])), 'visualizations')
 
 class ErrorHandler(object):
