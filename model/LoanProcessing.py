@@ -17,7 +17,10 @@ from sklearn.preprocessing import LabelEncoder
 from EncoderStore import EncoderStore
 
 DEFAULT_DIRECTORY = os.path.join(os.sep.join(map(str, os.getcwd().split(os.sep)[:-1])), 'dataset')
-DATA_CSV_FILENAME = 'LoanApplyData-bank-EditedForTest.csv'
+
+DATA_CSV_FILENAME = 'LoanApplyData-bank.csv'
+#DATA_CSV_FILENAME = 'LoanApplyData-bank-EditedForTest.csv'
+
 VISUALIZATION_SAVE_DIRECTORY = os.path.join(os.sep.join(map(str, os.getcwd().split(os.sep)[:-1])), 'visualizations')
 COLUMNS_CATEGORIZATION_APPLICABLE = ['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'campaign',
                                      'previous', 'poutcome', 'target']
