@@ -267,8 +267,8 @@ class MissingValue:
     def __impute_by_knn(self, df):
         logger.info("In MissingValue | __impute_by_knn started")
         try:
-            logger.debug("Applying KNN for imputation with k=3")
-            df = fast_knn(k=3, data=df)
+            logger.debug("Applying KNN for imputation with k=1")
+            df = fast_knn(k=1, data=df)
         except Exception as exp:
             err = self.errObj.handleErr(str(exp))
             logger.error(str(err))
@@ -276,14 +276,13 @@ class MissingValue:
         return df
 
     def __impute_by_mice(self, df):
-        logger.info("In MissingValue | __impute_by_knn started")
+        logger.info("In MissingValue | __impute_by_mice started")
         try:
-            logger.debug("Applying KNN for imputation with k=3")
             df = mice(data=df)
         except Exception as exp:
             err = self.errObj.handleErr(str(exp))
             logger.error(str(err))
-        logger.info("In MissingValue | __impute_by_knn finished")
+        logger.info("In MissingValue | __impute_by_mice finished")
         return df
 
 
@@ -318,7 +317,7 @@ def main():
         logger.info('Column wise Missing Values in dataset : ' + str(missing_val_info))
         missing_val.visualize_missing_values(df)
         missing_val.visualize_heatmap(df)
-        missing_val.impute_missing_values(df, missing_val_info)
+        missing_val.impute_missing_values(df, missing_val_info, method='strategic')
         missing_val.visualize_missing_values(df, postSubscript=True)
     else:
         logger.info('The given dataset has no missing values.')
