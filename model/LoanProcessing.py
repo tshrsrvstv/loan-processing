@@ -10,7 +10,7 @@ from sklearn.impute import SimpleImputer
 import numpy as np
 import sys, os, gc, traceback
 import missingno as msno
-from impyute.imputation.cs import mice
+from impyute.imputation.cs import mice, fast_knn
 from scipy import stats
 from Logger import logger
 from sklearn.preprocessing import LabelEncoder
@@ -18,12 +18,30 @@ from EncoderStore import EncoderStore
 
 DEFAULT_DIRECTORY = os.path.join(os.sep.join(map(str, os.getcwd().split(os.sep)[:-1])), 'dataset')
 
-DATA_CSV_FILENAME = 'LoanApplyData-bank.csv'
-#DATA_CSV_FILENAME = 'LoanApplyData-bank-EditedForTest.csv'
+# DATA_CSV_FILENAME = 'LoanApplyData-bank.csv'
+DATA_CSV_FILENAME = 'LoanApplyData-bank-EditedForTest.csv'
 
 VISUALIZATION_SAVE_DIRECTORY = os.path.join(os.sep.join(map(str, os.getcwd().split(os.sep)[:-1])), 'visualizations')
 COLUMNS_CATEGORIZATION_APPLICABLE = ['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'campaign',
                                      'previous', 'poutcome', 'target']
+COLUMN_WISE_IMPUTE_TECHNIQUE_MAP = {
+    'job': 'mode',
+    'marital': 'mode',
+    'education': 'mode',
+    'default': 'mode',
+    'balance': 'value',
+    'housing': 'mode',
+    'loan': 'mode',
+    'contact': 'mode',
+    'day': 'mode',
+    'month': 'mode',
+    'duration': 'mean',
+    'campaign': 'mode',
+    'pdays': 'mean',
+    'previous': 'mean',
+    'poutcome': 'mode',
+    'target': 'mode'
+}
 
 
 class ErrorHandler(object):
@@ -136,7 +154,7 @@ class MissingValue:
         logger.info("In MissingValue | get_missing_values_info finished")
         return info
 
-    def visualize_missing_values(self, df):
+    def visualize_missing_values(self, df, postSubscript=False):
         logger.info("In MissingValue | visualize_missing_values started")
         try:
             if not os.path.exists(VISUALIZATION_SAVE_DIRECTORY):
@@ -144,13 +162,15 @@ class MissingValue:
             msno.matrix(df)
             plt.ion()
             plt.show()
-            plt.savefig(os.path.join(VISUALIZATION_SAVE_DIRECTORY, 'missing_number_matrix_visualization.png'))
+            filename = 'missing_number_matrix_visualization.png' if not postSubscript else 'missing_number_matrix_visualization_post.png'
+            plt.savefig(os.path.join(VISUALIZATION_SAVE_DIRECTORY, filename))
             plt.pause(1)
             plt.close()
             msno.bar(df)
             plt.ion()
             plt.show()
-            plt.savefig(os.path.join(VISUALIZATION_SAVE_DIRECTORY, 'missing_number_bar_chart.png'))
+            filename = 'missing_number_bar_chart.png' if not postSubscript else 'missing_number_bar_chart_post.png'
+            plt.savefig(os.path.join(VISUALIZATION_SAVE_DIRECTORY, filename))
             plt.pause(1)
             plt.close()
         except Exception as exp:
@@ -171,6 +191,100 @@ class MissingValue:
             err = self.errObj.handleErr(str(exp))
             logger.error(str(err))
         logger.info("In MissingValue | visualize_heatmap finished")
+
+    def impute_missing_values(self, df, missing_val_info, method='strategic'):
+        logger.info("In MissingValue | impute_missing_value started")
+        try:
+            possible_methods = ['strategic', 'knn', 'mice']
+            if method in possible_methods:
+                if method == 'strategic':
+                    for col in df.columns:
+                        if missing_val_info[col]['percentage'] > 0:
+                            logger.debug('Strategically imputing column : ' + str(col))
+                            column_imputation_method = COLUMN_WISE_IMPUTE_TECHNIQUE_MAP.get(col)
+                            if column_imputation_method == 'mode':
+                                self.__impute_by_mode(df, col)
+                            elif column_imputation_method == 'mean':
+                                self.__impute_by_mean(df, col)
+                            elif column_imputation_method == 'median':
+                                self.__impute_by_median(df, col)
+                            elif column_imputation_method == 'value':
+                                self.__impute_by_value(df, col, 0)
+                elif method == 'knn':
+                    self.__impute_by_knn(df)
+                elif method == 'mice':
+                    self.__impute_by_mice(df)
+            else:
+                logger.error("Incorrect Imputation Method !!! Possible values : strategic, knn, mice")
+        except Exception as exp:
+            err = self.errObj.handleErr(str(exp))
+            logger.error(str(err))
+        logger.info("In MissingValue | impute_missing_value finished")
+
+    def __impute_by_mode(self, df, col):
+        logger.info("In MissingValue | __impute_by_mode started")
+        try:
+            column_mode = df[col].mode()
+            logger.debug("Mode obtained for column " + str(col) + " : " + str(column_mode))
+            df[col] = df[col].fillna(column_mode)
+        except Exception as exp:
+            err = self.errObj.handleErr(str(exp))
+            logger.error(str(err))
+        logger.info("In MissingValue | __impute_by_mode finished")
+
+    def __impute_by_mean(self, df, col):
+        logger.info("In MissingValue | __impute_by_mean started")
+        try:
+            column_mean = df[col].mean()
+            logger.debug("Mean obtained for column " + str(col) + " : " + str(column_mean))
+            df[col] = df[col].fillna(column_mean)
+        except Exception as exp:
+            err = self.errObj.handleErr(str(exp))
+            logger.error(str(err))
+        logger.info("In MissingValue | __impute_by_mean finished")
+
+    def __impute_by_median(self, df, col):
+        logger.info("In MissingValue | __impute_by_median started")
+        try:
+            column_median = df[col].median()
+            logger.debug("Mean obtained for column " + str(col) + " : " + str(column_median))
+            df[col] = df[col].fillna(column_median)
+        except Exception as exp:
+            err = self.errObj.handleErr(str(exp))
+            logger.error(str(err))
+        logger.info("In MissingValue | __impute_by_median finished")
+
+    def __impute_by_value(self, df, col, value):
+        logger.info("In MissingValue | __impute_by_value started")
+        try:
+            logger.debug("Value to replace NAN for column " + str(col) + " : " + str(value))
+            df[col] = df[col].fillna(value)
+        except Exception as exp:
+            err = self.errObj.handleErr(str(exp))
+            logger.error(str(err))
+        logger.info("In MissingValue | __impute_by_value finished")
+
+    def __impute_by_knn(self, df):
+        logger.info("In MissingValue | __impute_by_knn started")
+        try:
+            logger.debug("Applying KNN for imputation with k=3")
+            df = fast_knn(k=3, data=df)
+        except Exception as exp:
+            err = self.errObj.handleErr(str(exp))
+            logger.error(str(err))
+        logger.info("In MissingValue | __impute_by_knn finished")
+        return df
+
+    def __impute_by_mice(self, df):
+        logger.info("In MissingValue | __impute_by_knn started")
+        try:
+            logger.debug("Applying KNN for imputation with k=3")
+            df = mice(data=df)
+        except Exception as exp:
+            err = self.errObj.handleErr(str(exp))
+            logger.error(str(err))
+        logger.info("In MissingValue | __impute_by_knn finished")
+        return df
 
 
 class Outlier:
@@ -195,9 +309,19 @@ def main():
     del pre_process
     missing_val = MissingValue()
     missing_val_info = missing_val.get_missing_values_info(df)
-    missing_val.visualize_missing_values(df)
-    missing_val.visualize_heatmap(df)
-    logger.info('Column wise Missing Values in dataset : ' + str(missing_val_info))
+    dataset_has_missing_values = False
+    for key in missing_val_info:
+        if missing_val_info[key]['percentage'] > 0:
+            dataset_has_missing_values = True
+            break
+    if dataset_has_missing_values:
+        logger.info('Column wise Missing Values in dataset : ' + str(missing_val_info))
+        missing_val.visualize_missing_values(df)
+        missing_val.visualize_heatmap(df)
+        missing_val.impute_missing_values(df, missing_val_info)
+        missing_val.visualize_missing_values(df, postSubscript=True)
+    else:
+        logger.info('The given dataset has no missing values.')
     del missing_val
     logger.info('Main Finished')
 
