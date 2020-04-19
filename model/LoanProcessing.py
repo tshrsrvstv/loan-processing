@@ -12,44 +12,14 @@ import sys, os, gc, traceback
 import missingno as msno
 from impyute.imputation.cs import mice, fast_knn
 from scipy import stats
-from Logger import logger
 from sklearn.preprocessing import LabelEncoder
-from EncoderStore import EncoderStore
 
-DEFAULT_DIRECTORY = os.path.join(os.sep.join(map(str, os.getcwd().split(os.sep)[:-1])), 'dataset')
-
-# DATA_CSV_FILENAME = 'LoanApplyData-bank.csv'
-DATA_CSV_FILENAME = 'LoanApplyData-bank-EditedForTest.csv'
-
-VISUALIZATION_SAVE_DIRECTORY = os.path.join(os.sep.join(map(str, os.getcwd().split(os.sep)[:-1])), 'visualizations')
-COLUMNS_CATEGORIZATION_APPLICABLE = ['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'month', 'campaign',
-                                     'previous', 'poutcome', 'target']
-COLUMN_WISE_IMPUTE_TECHNIQUE_MAP = {
-    'job': 'mode',
-    'marital': 'mode',
-    'education': 'mode',
-    'default': 'mode',
-    'balance': 'value',
-    'housing': 'mode',
-    'loan': 'mode',
-    'contact': 'mode',
-    'day': 'mode',
-    'month': 'mode',
-    'duration': 'mean',
-    'campaign': 'mode',
-    'pdays': 'mean',
-    'previous': 'mean',
-    'poutcome': 'mode',
-    'target': 'mode'
-}
-
-
-class ErrorHandler(object):
-    def handleErr(self, err):
-        tb = sys.exc_info()[-1]
-        stk = traceback.extract_tb(tb, 1)
-        functionName = stk[0][2]
-        return functionName + ":" + err
+from model.Constants import DEFAULT_DIRECTORY, DATA_CSV_FILENAME, COLUMNS_CATEGORIZATION_APPLICABLE, \
+    VISUALIZATION_SAVE_DIRECTORY, COLUMN_WISE_IMPUTE_TECHNIQUE_MAP
+from model.DataVisualization import DataVisualisation
+from model.EncoderStore import EncoderStore
+from model.ErrorHandler import ErrorHandler
+from model.Logger import logger
 
 
 class PreProcessor():
@@ -178,8 +148,8 @@ class MissingValue:
             logger.error(str(err))
         logger.info("In MissingValue | visualize_missing_values finished")
 
-    def visualize_heatmap(self, df):
-        logger.info("In MissingValue | visualize_heatmap started")
+    def visualize_missing_value_heatmap(self, df):
+        logger.info("In MissingValue | visualize_missing_value_heatmap started")
         try:
             msno.heatmap(df)
             plt.ion()
@@ -190,7 +160,7 @@ class MissingValue:
         except Exception as exp:
             err = self.errObj.handleErr(str(exp))
             logger.error(str(err))
-        logger.info("In MissingValue | visualize_heatmap finished")
+        logger.info("In MissingValue | visualize_missing_value_heatmap finished")
 
     def impute_missing_values(self, df, missing_val_info, method='strategic'):
         logger.info("In MissingValue | impute_missing_value started")
@@ -306,6 +276,18 @@ def main():
     logger.info('DataFrame After Categorical Column Label Encoding :')
     logger.info(df.head())
     del pre_process
+    visualization = DataVisualisation()
+    visualization.visualize_target(df)
+    visualization.visualize_age_vs_target(df)
+    visualization.visualize_job_vs_target(df)
+    visualization.visualize_marital_status_vs_target(df)
+    visualization.visualize_education_vs_target(df)
+    visualization.visualize_default_vs_target(df)
+    visualization.visualize_balance_vs_target(df)
+    visualization.visualize_duration_vs_target(df)
+    visualization.visualize_campaign_vs_target(df)
+    visualization.visualize_feature_correlation_heat_map(df)
+    del visualization
     missing_val = MissingValue()
     missing_val_info = missing_val.get_missing_values_info(df)
     dataset_has_missing_values = False
@@ -316,7 +298,7 @@ def main():
     if dataset_has_missing_values:
         logger.info('Column wise Missing Values in dataset : ' + str(missing_val_info))
         missing_val.visualize_missing_values(df)
-        missing_val.visualize_heatmap(df)
+        missing_val.visualize_missing_value_heatmap(df)
         missing_val.impute_missing_values(df, missing_val_info, method='strategic')
         missing_val.visualize_missing_values(df, postSubscript=True)
     else:
