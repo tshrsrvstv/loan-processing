@@ -7,6 +7,7 @@ from model.Logger import logger
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
 class DataVisualisation():
     def __init__(self, parent=None):
         try:
@@ -190,10 +191,13 @@ class DataVisualisation():
             default_encoder = EncoderStore.get('default')
             target_labels = target_encoder.classes_
             inverse_default = default_encoder.inverse_transform(df['default'])
-            sizes_default_no = [((inverse_default == 'no') & (inverse_target == 'no')).sum(), ((inverse_default == 'no') & (inverse_target == 'yes')).sum()]
-            sizes_default_yes = [((inverse_default == 'yes') & (inverse_target == 'no')).sum(), ((inverse_default == 'yes') & (inverse_target == 'yes')).sum()]
+            sizes_default_no = [((inverse_default == 'no') & (inverse_target == 'no')).sum(),
+                                ((inverse_default == 'no') & (inverse_target == 'yes')).sum()]
+            sizes_default_yes = [((inverse_default == 'yes') & (inverse_target == 'no')).sum(),
+                                 ((inverse_default == 'yes') & (inverse_target == 'yes')).sum()]
             sizes = sizes_default_no + sizes_default_yes
-            overall_labels = ['Default:no, Target:no', 'Default:no, Target:yes', 'Default:yes, Target:no', 'Default:yes, Target:yes']
+            overall_labels = ['Default:no, Target:no', 'Default:no, Target:yes', 'Default:yes, Target:no',
+                              'Default:yes, Target:yes']
             overall_colors = ['olive', 'pink', 'orange', 'blue']
             colors = ['lightcoral', 'yellowgreen']
             fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(30, 10))
@@ -321,8 +325,8 @@ class DataVisualisation():
     def visualize_feature_correlation_heat_map(self, df):
         logger.info("In DataVisualisation | visualize_feature_correlation_heat_map started")
         try:
-            fig,ax = plt.subplots(figsize=(20,20))
-            chart = sns.heatmap(df.corr(), ax=ax, annot = True, vmin=-1, vmax=1, center= 0, cmap= 'coolwarm')
+            fig, ax = plt.subplots(figsize=(20, 20))
+            chart = sns.heatmap(df.corr(), ax=ax, annot=True, vmin=-1, vmax=1, center=0, cmap='coolwarm')
             chart.set_xticklabels(chart.get_xticklabels(), rotation=90)
             chart.set_yticklabels(chart.get_yticklabels(), rotation=0)
             plt.ion()

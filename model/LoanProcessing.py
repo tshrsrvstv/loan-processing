@@ -12,7 +12,7 @@ import sys, os, gc, traceback
 import missingno as msno
 from impyute.imputation.cs import mice, fast_knn
 from scipy import stats
-from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
 from model.Constants import DEFAULT_DIRECTORY, DATA_CSV_FILENAME, COLUMNS_CATEGORIZATION_APPLICABLE, \
     VISUALIZATION_SAVE_DIRECTORY, COLUMN_WISE_IMPUTE_TECHNIQUE_MAP
@@ -63,11 +63,19 @@ class PreProcessor():
                     encoder.fit(df[col].unique())
                     df[col] = encoder.fit_transform(df[col])
                     EncoderStore.save(col, encoder)
+            one_hot_encoder = OneHotEncoder(sparse=False, handle_unknown='ignore')
+            for col in cat_cols:
+                enc_df = pd.DataFrame(one_hot_encoder.fit_transform(df[[col]]))
+                enc_df.columns = one_hot_encoder.get_feature_names([col])
+                df = df.join(enc_df)
+            logger.info('Columns in dataframe after one hot encoding: ' + str(df.columns))
+            logger.info('Shape of dataframe after one hot encoding: ' + str(df.shape))
         except Exception as exp:
             err = self.errObj.handleErr(str(exp))
             logger.error(str(err))
         logger.info("In PreProcessor | convert_to_categorical_values finished")
         return df
+
 
     def dimension_stat_analysis(self, df, categorical_cols):
         logger.info("In PreProcessor | dimension_stat_analysis started")
@@ -272,8 +280,8 @@ def main():
     categorical_cols = pre_process.detect_categorical_columns(df)
     logger.info('Categorical Columns in dataset : ' + str(categorical_cols))
     pre_process.dimension_stat_analysis(df, categorical_cols)
-    pre_process.convert_to_categorical_values(df, categorical_cols)
-    logger.info('DataFrame After Categorical Column Label Encoding :')
+    df = pre_process.convert_to_categorical_values(df, categorical_cols)
+    logger.info('DataFrame After Categorical Column Encoding :')
     logger.info(df.head())
     del pre_process
     visualization = DataVisualisation()
