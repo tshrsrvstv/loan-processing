@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 
 from model.ErrorHandler import ErrorHandler
+#from model.LoanProcessing import PreProcessor
 from model.Logger import logger
 
 
@@ -32,7 +33,19 @@ class FeatureEngineering():
             d1 = data.copy()
             length = len(d1)
             for col in categorical_cols:
-                d1[col + 'Pct'] = (d1[col].groupby(d1[i]).transform('count')) * 100 / length
+                d1[col + 'Pct'] = (d1[col].groupby(d1[col]).transform('count')) * 100 / length
+            logger.info("In FeatureEngineering | create_category_percent finished")
+            return d1
+        except Exception as exp:
+            err = self.errObj.handleErr(str(exp))
+            logger.error(str(err))
+
+    def convert_numerical_to_Categorical(self, df, eligible_cols):
+        try:
+            ogger.info("In FeatureEngineering | create_category_percent started")
+            d1 = data.copy()
+            length = len(d1)
+
             logger.info("In FeatureEngineering | create_category_percent finished")
             return d1
         except Exception as exp:
