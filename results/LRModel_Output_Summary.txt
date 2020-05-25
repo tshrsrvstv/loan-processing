@@ -1,0 +1,700 @@
+C:\Users\e01703\AppData\Local\Continuum\anaconda3\python.exe "C:/AIML/Capstone Project Loan Processing/CodeBase/loan-processing/model/LogisticRegression.py"
+Using TensorFlow backend.
+        age   balance  ...  poutcome_success  poutcome_unknown
+0  0.161765  0.068455  ...                 0                 1
+1  0.205882  0.108750  ...                 0                 0
+2  0.235294  0.062590  ...                 0                 0
+3  0.161765  0.064281  ...                 0                 1
+4  0.588235  0.044469  ...                 0                 1
+
+[5 rows x 51 columns]
+Running Standard Logistic Regression on DummyEncoded_MinMaxScaling
+Confusion Martix for Standard Logistic Regression model on DummyEncoded_MinMaxScaling
+[[791  16]
+ [ 75  23]]
+Training Accuracy for Standard Logistic Regression Model on DummyEncoded_MinMaxScaling
+0.9026548672566371
+Training Log loss for Standard Logistic Regression Model on DummyEncoded_MinMaxScaling
+3.362192165953479
+Accuracy for Standard Logistic Regression Model on DummyEncoded_MinMaxScaling
+0.8994475138121547
+Log loss for Standard Logistic Regression Model on DummyEncoded_MinMaxScaling
+3.4729739729234868
+Classification Report for Standard Logistic Regression Model on DummyEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.91      0.98      0.95       807
+           1       0.59      0.23      0.34        98
+
+    accuracy                           0.90       905
+   macro avg       0.75      0.61      0.64       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.88
+Running RandomizedSearch Logistic Regression on DummyEncoded_MinMaxScaling
+
+Best Penalty: l2
+Best C: 70548.02310718645
+Best solver: lbfgs
+Confusion Martix for Best Randomized Logistic Regression model on DummyEncoded_MinMaxScaling
+[[789  18]
+ [ 71  27]]
+Training Accuracy for Best Randomized Logistic Regression Model on DummyEncoded_MinMaxScaling
+0.9070796460176991
+Training Log Loss for Best Randomized Logistic Regression Model on DummyEncoded_MinMaxScaling
+3.2093714710460164
+Accuracy for Best Randomized Logistic Regression Model on DummyEncoded_MinMaxScaling
+0.901657458563536
+Log Loss for Best Randomized Logistic Regression Model on DummyEncoded_MinMaxScaling
+3.3966469523765683
+Classification Report for Randomized Logistic Regression Model on DummyEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.92      0.98      0.95       807
+           1       0.60      0.28      0.38        98
+
+    accuracy                           0.90       905
+   macro avg       0.76      0.63      0.66       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.89
+        age   balance  ...  poutcome_success  poutcome_unknown
+0  0.161765  0.068455  ...                 0                 1
+1  0.205882  0.108750  ...                 0                 0
+2  0.235294  0.062590  ...                 0                 0
+3  0.161765  0.064281  ...                 0                 1
+4  0.588235  0.044469  ...                 0                 1
+
+[5 rows x 51 columns]
+Running Standard Logistic Regression on DummyEncoded_MinMaxScaling_SMOTE
+Confusion Martix for Standard Logistic Regression model on DummyEncoded_MinMaxScaling_SMOTE
+[[776  31]
+ [ 61  37]]
+Training Accuracy for Standard Logistic Regression Model on DummyEncoded_MinMaxScaling_SMOTE
+0.931412464766677
+Training Log loss for Standard Logistic Regression Model on DummyEncoded_MinMaxScaling_SMOTE
+2.368944067377511
+Accuracy for Standard Logistic Regression Model on DummyEncoded_MinMaxScaling_SMOTE
+0.8983425414364641
+Log loss for Standard Logistic Regression Model on DummyEncoded_MinMaxScaling_SMOTE
+3.511151619726099
+Classification Report for Standard Logistic Regression Model on DummyEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.93      0.96      0.94       807
+           1       0.54      0.38      0.45        98
+
+    accuracy                           0.90       905
+   macro avg       0.74      0.67      0.69       905
+weighted avg       0.89      0.90      0.89       905
+
+AUC: 0.88
+Running RandomizedSearch Logistic Regression on DummyEncoded_MinMaxScaling_SMOTE
+
+Best Penalty: l2
+Best C: 1353.0477745798062
+Best solver: liblinear
+Confusion Martix for Best Randomized Logistic Regression model on DummyEncoded_MinMaxScaling_SMOTE
+[[777  30]
+ [ 64  34]]
+Training Accuracy for Best Randomized Logistic Regression Model on DummyEncoded_MinMaxScaling_SMOTE
+0.9292201691199499
+Training Log Loss for Best Randomized Logistic Regression Model on DummyEncoded_MinMaxScaling_SMOTE
+2.4446626504563707
+Accuracy for Best Randomized Logistic Regression Model on DummyEncoded_MinMaxScaling_SMOTE
+0.8961325966850828
+Log Loss for Best Randomized Logistic Regression Model on DummyEncoded_MinMaxScaling_SMOTE
+3.587479523806089
+Classification Report for Randomized Logistic Regression Model on DummyEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.92      0.96      0.94       807
+           1       0.53      0.35      0.42        98
+
+    accuracy                           0.90       905
+   macro avg       0.73      0.65      0.68       905
+weighted avg       0.88      0.90      0.89       905
+
+AUC: 0.88
+   age  balance  day  ...  poutcome_other  poutcome_success  poutcome_unknown
+0   30     1787   19  ...               0                 0                 1
+1   33     4789   11  ...               0                 0                 0
+2   35     1350   16  ...               0                 0                 0
+3   30     1476    3  ...               0                 0                 1
+4   59        0    5  ...               0                 0                 1
+
+[5 rows x 51 columns]
+Running Standard Logistic Regression on DummyEncoded_SMOTE
+Confusion Martix for Standard Logistic Regression model on DummyEncoded_SMOTE
+[[369 438]
+ [  7  91]]
+Training Accuracy for Standard Logistic Regression Model on DummyEncoded_SMOTE
+0.6808643908549953
+Training Log loss for Standard Logistic Regression Model on DummyEncoded_SMOTE
+11.022764800076752
+Accuracy for Standard Logistic Regression Model on DummyEncoded_SMOTE
+0.5082872928176796
+Log loss for Standard Logistic Regression Model on DummyEncoded_SMOTE
+16.98354223139191
+Classification Report for Standard Logistic Regression Model on DummyEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.98      0.46      0.62       807
+           1       0.17      0.93      0.29        98
+
+    accuracy                           0.51       905
+   macro avg       0.58      0.69      0.46       905
+weighted avg       0.89      0.51      0.59       905
+
+AUC: 0.82
+Running RandomizedSearch Logistic Regression on DummyEncoded_SMOTE
+
+Best Penalty: l1
+Best C: 2154.4346900318847
+Best solver: liblinear
+Confusion Martix for Best Randomized Logistic Regression model on DummyEncoded_SMOTE
+[[789  18]
+ [ 71  27]]
+Training Accuracy for Best Randomized Logistic Regression Model on DummyEncoded_SMOTE
+0.9470717193861572
+Training Log Loss for Best Randomized Logistic Regression Model on DummyEncoded_SMOTE
+1.8280875651244142
+Accuracy for Best Randomized Logistic Regression Model on DummyEncoded_SMOTE
+0.901657458563536
+Log Loss for Best Randomized Logistic Regression Model on DummyEncoded_SMOTE
+3.3966469523765683
+Classification Report for Randomized Logistic Regression Model on DummyEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.92      0.98      0.95       807
+           1       0.60      0.28      0.38        98
+
+    accuracy                           0.90       905
+   macro avg       0.76      0.63      0.66       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.89
+   age  balance  day  ...  poutcome_other  poutcome_success  poutcome_unknown
+0   30     1787   19  ...               0                 0                 1
+1   33     4789   11  ...               0                 0                 0
+2   35     1350   16  ...               0                 0                 0
+3   30     1476    3  ...               0                 0                 1
+4   59        0    5  ...               0                 0                 1
+
+[5 rows x 51 columns]
+Running Standard Logistic Regression on DummyEncoded
+Confusion Martix for Standard Logistic Regression model on DummyEncoded
+[[805   2]
+ [ 98   0]]
+Training Accuracy for Standard Logistic Regression Model on DummyEncoded
+0.8830199115044248
+Training Log loss for Standard Logistic Regression Model on DummyEncoded
+4.040349119205537
+Accuracy for Standard Logistic Regression Model on DummyEncoded
+0.8895027624309392
+Log loss for Standard Logistic Regression Model on DummyEncoded
+3.8164411477192584
+Classification Report for Standard Logistic Regression Model on DummyEncoded
+              precision    recall  f1-score   support
+
+           0       0.89      1.00      0.94       807
+           1       0.00      0.00      0.00        98
+
+    accuracy                           0.89       905
+   macro avg       0.45      0.50      0.47       905
+weighted avg       0.79      0.89      0.84       905
+
+AUC: 0.26
+Running RandomizedSearch Logistic Regression on DummyEncoded
+
+Best Penalty: l1
+Best C: 2154.4346900318847
+Best solver: liblinear
+Confusion Martix for Best Randomized Logistic Regression model on DummyEncoded
+[[789  18]
+ [ 71  27]]
+Training Accuracy for Best Randomized Logistic Regression Model on DummyEncoded
+0.9070796460176991
+Training Log Loss for Best Randomized Logistic Regression Model on DummyEncoded
+3.2093714710460164
+Accuracy for Best Randomized Logistic Regression Model on DummyEncoded
+0.901657458563536
+Log Loss for Best Randomized Logistic Regression Model on DummyEncoded
+3.3966469523765683
+Classification Report for Randomized Logistic Regression Model on DummyEncoded
+              precision    recall  f1-score   support
+
+           0       0.92      0.98      0.95       807
+           1       0.60      0.28      0.38        98
+
+    accuracy                           0.90       905
+   macro avg       0.76      0.63      0.66       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.89
+   job_admin.  job_blue-collar  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0           0                0  ...                      0                      0
+1           0                0  ...                      0                      0
+2           0                0  ...                      0                      0
+3           0                0  ...                      0                      0
+4           0                1  ...                      0                      0
+
+[5 rows x 72 columns]
+Running Standard Logistic Regression on DummyEncoded_Binning
+Confusion Martix for Standard Logistic Regression model on DummyEncoded_Binning
+[[787  20]
+ [ 75  23]]
+Training Accuracy for Standard Logistic Regression Model on DummyEncoded_Binning
+0.9023783185840708
+Training Log loss for Standard Logistic Regression Model on DummyEncoded_Binning
+3.37174890465254
+Accuracy for Standard Logistic Regression Model on DummyEncoded_Binning
+0.8950276243093923
+Log loss for Standard Logistic Regression Model on DummyEncoded_Binning
+3.6256350822818995
+Classification Report for Standard Logistic Regression Model on DummyEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.91      0.98      0.94       807
+           1       0.53      0.23      0.33        98
+
+    accuracy                           0.90       905
+   macro avg       0.72      0.60      0.63       905
+weighted avg       0.87      0.90      0.88       905
+
+AUC: 0.81
+Running RandomizedSearch Logistic Regression on DummyEncoded_Binning
+
+Best Penalty: l2
+Best C: 385352859.3710535
+Best solver: sag
+Confusion Martix for Best Randomized Logistic Regression model on DummyEncoded_Binning
+[[787  20]
+ [ 72  26]]
+Training Accuracy for Best Randomized Logistic Regression Model on DummyEncoded_Binning
+0.9021017699115044
+Training Log Loss for Best Randomized Logistic Regression Model on DummyEncoded_Binning
+3.381301884182267
+Accuracy for Best Randomized Logistic Regression Model on DummyEncoded_Binning
+0.8983425414364641
+Log Loss for Best Randomized Logistic Regression Model on DummyEncoded_Binning
+3.5111419008623064
+Classification Report for Randomized Logistic Regression Model on DummyEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.92      0.98      0.94       807
+           1       0.57      0.27      0.36        98
+
+    accuracy                           0.90       905
+   macro avg       0.74      0.62      0.65       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.80
+   job_admin.  job_blue-collar  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0           0                0  ...                      0                      0
+1           0                0  ...                      0                      0
+2           0                0  ...                      0                      0
+3           0                0  ...                      0                      0
+4           0                1  ...                      0                      0
+
+[5 rows x 72 columns]
+Running Standard Logistic Regression on DummyEncoded_Binning_SMOTE
+Confusion Martix for Standard Logistic Regression model on DummyEncoded_Binning_SMOTE
+[[807   0]
+ [ 98   0]]
+Training Accuracy for Standard Logistic Regression Model on DummyEncoded_Binning_SMOTE
+0.9087065455684309
+Training Log loss for Standard Logistic Regression Model on DummyEncoded_Binning_SMOTE
+3.1531642089309315
+Accuracy for Standard Logistic Regression Model on DummyEncoded_Binning_SMOTE
+0.8917127071823204
+Log loss for Standard Logistic Regression Model on DummyEncoded_Binning_SMOTE
+3.740110593040052
+Classification Report for Standard Logistic Regression Model on DummyEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.89      1.00      0.94       807
+           1       0.00      0.00      0.00        98
+
+    accuracy                           0.89       905
+   macro avg       0.45      0.50      0.47       905
+weighted avg       0.80      0.89      0.84       905
+
+AUC: 0.66
+Running RandomizedSearch Logistic Regression on DummyEncoded_Binning_SMOTE
+
+Best Penalty: l2
+Best C: 4977023564.332114
+Best solver: lbfgs
+Confusion Martix for Best Randomized Logistic Regression model on DummyEncoded_Binning_SMOTE
+[[779  28]
+ [ 69  29]]
+Training Accuracy for Best Randomized Logistic Regression Model on DummyEncoded_Binning_SMOTE
+0.9400250548073912
+Training Log Loss for Best Randomized Logistic Regression Model on DummyEncoded_Binning_SMOTE
+2.071471613817335
+Accuracy for Best Randomized Logistic Regression Model on DummyEncoded_Binning_SMOTE
+0.8928176795580111
+Log Loss for Best Randomized Logistic Regression Model on DummyEncoded_Binning_SMOTE
+3.7019709381595383
+Classification Report for Randomized Logistic Regression Model on DummyEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.92      0.97      0.94       807
+           1       0.51      0.30      0.37        98
+
+    accuracy                           0.89       905
+   macro avg       0.71      0.63      0.66       905
+weighted avg       0.87      0.89      0.88       905
+
+AUC: 0.79
+        age  job  marital  education  ...  campaign     pdays  previous  poutcome
+0  0.161765   10        1          0  ...  0.000000  0.000000      0.00         3
+1  0.205882    7        1          1  ...  0.000000  0.389908      0.16         0
+2  0.235294    4        2          2  ...  0.000000  0.379587      0.04         0
+3  0.161765    4        1          2  ...  0.061224  0.000000      0.00         3
+4  0.588235    1        1          1  ...  0.000000  0.000000      0.00         3
+
+[5 rows x 16 columns]
+Running Standard Logistic Regression on LabeEncoded_MinMaxScaling
+Confusion Martix for Standard Logistic Regression model on LabeEncoded_MinMaxScaling
+[[796  11]
+ [ 86  12]]
+Training Accuracy for Standard Logistic Regression Model on LabeEncoded_MinMaxScaling
+0.8885508849557522
+Training Log loss for Standard Logistic Regression Model on LabeEncoded_MinMaxScaling
+3.8493231400074035
+Accuracy for Standard Logistic Regression Model on LabeEncoded_MinMaxScaling
+0.8928176795580111
+Log loss for Standard Logistic Regression Model on LabeEncoded_MinMaxScaling
+3.701955918097313
+Classification Report for Standard Logistic Regression Model on LabeEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.90      0.99      0.94       807
+           1       0.52      0.12      0.20        98
+
+    accuracy                           0.89       905
+   macro avg       0.71      0.55      0.57       905
+weighted avg       0.86      0.89      0.86       905
+
+AUC: 0.86
+Running RandomizedSearch Logistic Regression on LabeEncoded_MinMaxScaling
+
+Best Penalty: l1
+Best C: 12.91549665014884
+Best solver: saga
+Confusion Martix for Best Randomized Logistic Regression model on LabeEncoded_MinMaxScaling
+[[791  16]
+ [ 81  17]]
+Training Accuracy for Best Randomized Logistic Regression Model on LabeEncoded_MinMaxScaling
+0.8907632743362832
+Training Log Loss for Best Randomized Logistic Regression Model on LabeEncoded_MinMaxScaling
+3.772913234808888
+Accuracy for Best Randomized Logistic Regression Model on LabeEncoded_MinMaxScaling
+0.8928176795580111
+Log Loss for Best Randomized Logistic Regression Model on LabeEncoded_MinMaxScaling
+3.701960335762674
+Classification Report for Randomized Logistic Regression Model on LabeEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.91      0.98      0.94       807
+           1       0.52      0.17      0.26        98
+
+    accuracy                           0.89       905
+   macro avg       0.71      0.58      0.60       905
+weighted avg       0.86      0.89      0.87       905
+
+AUC: 0.87
+        age  job  marital  education  ...  campaign     pdays  previous  poutcome
+0  0.161765   10        1          0  ...  0.000000  0.000000      0.00         3
+1  0.205882    7        1          1  ...  0.000000  0.389908      0.16         0
+2  0.235294    4        2          2  ...  0.000000  0.379587      0.04         0
+3  0.161765    4        1          2  ...  0.061224  0.000000      0.00         3
+4  0.588235    1        1          1  ...  0.000000  0.000000      0.00         3
+
+[5 rows x 16 columns]
+Running Standard Logistic Regression on LabelEncoded_MinMaxScaling_SMOTE
+Confusion Martix for Standard Logistic Regression model on LabelEncoded_MinMaxScaling_SMOTE
+[[662 145]
+ [ 26  72]]
+Training Accuracy for Standard Logistic Regression Model on LabelEncoded_MinMaxScaling_SMOTE
+0.8222674600689007
+Training Log loss for Standard Logistic Regression Model on LabelEncoded_MinMaxScaling_SMOTE
+6.138738454479309
+Accuracy for Standard Logistic Regression Model on LabelEncoded_MinMaxScaling_SMOTE
+0.8110497237569061
+Log loss for Standard Logistic Regression Model on LabelEncoded_MinMaxScaling_SMOTE
+6.526239453212272
+Classification Report for Standard Logistic Regression Model on LabelEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.96      0.82      0.89       807
+           1       0.33      0.73      0.46        98
+
+    accuracy                           0.81       905
+   macro avg       0.65      0.78      0.67       905
+weighted avg       0.89      0.81      0.84       905
+
+AUC: 0.86
+Running RandomizedSearch Logistic Regression on LabelEncoded_MinMaxScaling_SMOTE
+
+Best Penalty: l2
+Best C: 70548.02310718645
+Best solver: lbfgs
+Confusion Martix for Best Randomized Logistic Regression model on LabelEncoded_MinMaxScaling_SMOTE
+[[669 138]
+ [ 25  73]]
+Training Accuracy for Best Randomized Logistic Regression Model on LabelEncoded_MinMaxScaling_SMOTE
+0.8249295333542124
+Training Log Loss for Best Randomized Logistic Regression Model on LabelEncoded_MinMaxScaling_SMOTE
+6.046791446733111
+Accuracy for Best Randomized Logistic Regression Model on LabelEncoded_MinMaxScaling_SMOTE
+0.8198895027624309
+Log Loss for Best Randomized Logistic Regression Model on LabelEncoded_MinMaxScaling_SMOTE
+6.220918118028518
+Classification Report for Randomized Logistic Regression Model on LabelEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.96      0.83      0.89       807
+           1       0.35      0.74      0.47        98
+
+    accuracy                           0.82       905
+   macro avg       0.65      0.79      0.68       905
+weighted avg       0.90      0.82      0.85       905
+
+AUC: 0.87
+   age  job  marital  education  ...  campaign  pdays  previous  poutcome
+0   30   10        1          0  ...         1     -1         0         3
+1   33    7        1          1  ...         1    339         4         0
+2   35    4        2          2  ...         1    330         1         0
+3   30    4        1          2  ...         4     -1         0         3
+4   59    1        1          1  ...         1     -1         0         3
+
+[5 rows x 16 columns]
+Running Standard Logistic Regression on LabelEncoded_SMOTE
+Confusion Martix for Standard Logistic Regression model on LabelEncoded_SMOTE
+[[379 428]
+ [  7  91]]
+Training Accuracy for Standard Logistic Regression Model on LabelEncoded_SMOTE
+0.6849357970560601
+Training Log loss for Standard Logistic Regression Model on LabelEncoded_SMOTE
+10.882138653667417
+Accuracy for Standard Logistic Regression Model on LabelEncoded_SMOTE
+0.5193370165745856
+Log loss for Standard Logistic Regression Model on LabelEncoded_SMOTE
+16.601889457995878
+Classification Report for Standard Logistic Regression Model on LabelEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.98      0.47      0.64       807
+           1       0.18      0.93      0.29        98
+
+    accuracy                           0.52       905
+   macro avg       0.58      0.70      0.47       905
+weighted avg       0.89      0.52      0.60       905
+
+AUC: 0.82
+Running RandomizedSearch Logistic Regression on LabelEncoded_SMOTE
+
+Best Penalty: l2
+Best C: 1353.0477745798062
+Best solver: liblinear
+Confusion Martix for Best Randomized Logistic Regression model on LabelEncoded_SMOTE
+[[680 127]
+ [ 34  64]]
+Training Accuracy for Best Randomized Logistic Regression Model on LabelEncoded_SMOTE
+0.8501409332915754
+Training Log Loss for Best Randomized Logistic Regression Model on LabelEncoded_SMOTE
+5.17601528283197
+Accuracy for Best Randomized Logistic Regression Model on LabelEncoded_SMOTE
+0.8220994475138121
+Log Loss for Best Randomized Logistic Regression Model on LabelEncoded_SMOTE
+6.144579611551664
+Classification Report for Randomized Logistic Regression Model on LabelEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.95      0.84      0.89       807
+           1       0.34      0.65      0.44        98
+
+    accuracy                           0.82       905
+   macro avg       0.64      0.75      0.67       905
+weighted avg       0.89      0.82      0.85       905
+
+AUC: 0.84
+   age  job  marital  education  ...  campaign  pdays  previous  poutcome
+0   30   10        1          0  ...         1     -1         0         3
+1   33    7        1          1  ...         1    339         4         0
+2   35    4        2          2  ...         1    330         1         0
+3   30    4        1          2  ...         4     -1         0         3
+4   59    1        1          1  ...         1     -1         0         3
+
+[5 rows x 16 columns]
+Running Standard Logistic Regression on LabelEncoded
+Confusion Martix for Standard Logistic Regression model on LabelEncoded
+[[805   2]
+ [ 98   0]]
+Training Accuracy for Standard Logistic Regression Model on LabelEncoded
+0.8830199115044248
+Training Log loss for Standard Logistic Regression Model on LabelEncoded
+4.040349119205537
+Accuracy for Standard Logistic Regression Model on LabelEncoded
+0.8895027624309392
+Log loss for Standard Logistic Regression Model on LabelEncoded
+3.8164411477192584
+Classification Report for Standard Logistic Regression Model on LabelEncoded
+              precision    recall  f1-score   support
+
+           0       0.89      1.00      0.94       807
+           1       0.00      0.00      0.00        98
+
+    accuracy                           0.89       905
+   macro avg       0.45      0.50      0.47       905
+weighted avg       0.79      0.89      0.84       905
+
+AUC: 0.26
+Running RandomizedSearch Logistic Regression on LabelEncoded
+
+Best Penalty: l2
+Best C: 70548.02310718645
+Best solver: lbfgs
+Confusion Martix for Best Randomized Logistic Regression model on LabelEncoded
+[[786  21]
+ [ 77  21]]
+Training Accuracy for Best Randomized Logistic Regression Model on LabelEncoded
+0.8871681415929203
+Training Log Loss for Best Randomized Logistic Regression Model on LabelEncoded
+3.897088922166469
+Accuracy for Best Randomized Logistic Regression Model on LabelEncoded
+0.8917127071823204
+Log Loss for Best Randomized Logistic Regression Model on LabelEncoded
+3.740129147234565
+Classification Report for Randomized Logistic Regression Model on LabelEncoded
+              precision    recall  f1-score   support
+
+           0       0.91      0.97      0.94       807
+           1       0.50      0.21      0.30        98
+
+    accuracy                           0.89       905
+   macro avg       0.71      0.59      0.62       905
+weighted avg       0.87      0.89      0.87       905
+
+AUC: 0.84
+   job  marital  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0   10        1  ...                      0                      0
+1    7        1  ...                      0                      0
+2    4        2  ...                      0                      0
+3    4        1  ...                      0                      0
+4    1        1  ...                      0                      0
+
+[5 rows x 37 columns]
+Running Standard Logistic Regression on LabelEncoded_Binning
+Confusion Martix for Standard Logistic Regression model on LabelEncoded_Binning
+[[788  19]
+ [ 82  16]]
+Training Accuracy for Standard Logistic Regression Model on LabelEncoded_Binning
+0.8921460176991151
+Training Log loss for Standard Logistic Regression Model on LabelEncoded_Binning
+3.725154749860884
+Accuracy for Standard Logistic Regression Model on LabelEncoded_Binning
+0.8883977900552487
+Log loss for Standard Logistic Regression Model on LabelEncoded_Binning
+3.854620561588014
+Classification Report for Standard Logistic Regression Model on LabelEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.91      0.98      0.94       807
+           1       0.46      0.16      0.24        98
+
+    accuracy                           0.89       905
+   macro avg       0.68      0.57      0.59       905
+weighted avg       0.86      0.89      0.86       905
+
+AUC: 0.78
+Running RandomizedSearch Logistic Regression on LabelEncoded_Binning
+
+Best Penalty: l2
+Best C: 3678379.771828634
+Best solver: saga
+Confusion Martix for Best Randomized Logistic Regression model on LabelEncoded_Binning
+[[788  19]
+ [ 82  16]]
+Training Accuracy for Best Randomized Logistic Regression Model on LabelEncoded_Binning
+0.8918694690265486
+Training Log Loss for Best Randomized Logistic Regression Model on LabelEncoded_Binning
+3.734707508263003
+Accuracy for Best Randomized Logistic Regression Model on LabelEncoded_Binning
+0.8883977900552487
+Log Loss for Best Randomized Logistic Regression Model on LabelEncoded_Binning
+3.854620561588014
+Classification Report for Randomized Logistic Regression Model on LabelEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.91      0.98      0.94       807
+           1       0.46      0.16      0.24        98
+
+    accuracy                           0.89       905
+   macro avg       0.68      0.57      0.59       905
+weighted avg       0.86      0.89      0.86       905
+
+AUC: 0.78
+   job  marital  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0   10        1  ...                      0                      0
+1    7        1  ...                      0                      0
+2    4        2  ...                      0                      0
+3    4        1  ...                      0                      0
+4    1        1  ...                      0                      0
+
+[5 rows x 37 columns]
+Running Standard Logistic Regression on LabelEncoded_Binning_SMOTE
+Confusion Martix for Standard Logistic Regression model on LabelEncoded_Binning_SMOTE
+[[756  51]
+ [ 70  28]]
+Training Accuracy for Standard Logistic Regression Model on LabelEncoded_Binning_SMOTE
+0.8636078922643282
+Training Log loss for Standard Logistic Regression Model on LabelEncoded_Binning_SMOTE
+4.710842555000421
+Accuracy for Standard Logistic Regression Model on LabelEncoded_Binning_SMOTE
+0.8662983425414365
+Log loss for Standard Logistic Regression Model on LabelEncoded_Binning_SMOTE
+4.617936710776942
+Classification Report for Standard Logistic Regression Model on LabelEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.92      0.94      0.93       807
+           1       0.35      0.29      0.32        98
+
+    accuracy                           0.87       905
+   macro avg       0.63      0.61      0.62       905
+weighted avg       0.85      0.87      0.86       905
+
+AUC: 0.77
+
+Running RandomizedSearch Logistic Regression on LabelEncoded_Binning_SMOTE
+Best Penalty: l2
+Best C: 1353.0477745798062
+Best solver: liblinear
+Confusion Martix for Best Randomized Logistic Regression model on LabelEncoded_Binning_SMOTE
+[[759  48]
+ [ 71  27]]
+Training Accuracy for Best Randomized Logistic Regression Model on LabelEncoded_Binning_SMOTE
+0.866113373003445
+Training Log Loss for Best Randomized Logistic Regression Model on LabelEncoded_Binning_SMOTE
+4.6243034361373665
+Accuracy for Best Randomized Logistic Regression Model on LabelEncoded_Binning_SMOTE
+0.8685082872928177
+Log Loss for Best Randomized Logistic Regression Model on LabelEncoded_Binning_SMOTE
+4.541605272564664
+Classification Report for Randomized Logistic Regression Model on LabelEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.91      0.94      0.93       807
+           1       0.36      0.28      0.31        98
+
+    accuracy                           0.87       905
+   macro avg       0.64      0.61      0.62       905
+weighted avg       0.85      0.87      0.86       905
+
+AUC: 0.75
+
+Process finished with exit code 0

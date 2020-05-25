@@ -1,0 +1,724 @@
+C:\Users\e01703\AppData\Local\Continuum\anaconda3\python.exe "C:/AIML/Capstone Project Loan Processing/CodeBase/loan-processing/model/RandomForestModel.py"
+Using TensorFlow backend.
+        age   balance  ...  poutcome_success  poutcome_unknown
+0  0.161765  0.068455  ...                 0                 1
+1  0.205882  0.108750  ...                 0                 0
+2  0.235294  0.062590  ...                 0                 0
+3  0.161765  0.064281  ...                 0                 1
+4  0.588235  0.044469  ...                 0                 1
+
+[5 rows x 51 columns]
+Running Standard RandomForest Classification on DummyEncoded_MinMaxScaling
+Confusion Martix for Standard RandomForest Classification model on DummyEncoded_MinMaxScaling
+[[790  17]
+ [ 72  26]]
+Training Accuracy for Standard RandomForest Classification Model on DummyEncoded_MinMaxScaling
+1.0
+Training Log loss for Standard RandomForest Classification Model on DummyEncoded_MinMaxScaling
+9.992007221626413e-16
+Accuracy for Standard RandomForest Classification Model on DummyEncoded_MinMaxScaling
+0.901657458563536
+Log loss for Standard RandomForest Classification Model on DummyEncoded_MinMaxScaling
+3.3966460688434963
+Classification Report for Standard RandomForest Classification Model on DummyEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.92      0.98      0.95       807
+           1       0.60      0.27      0.37        98
+
+    accuracy                           0.90       905
+   macro avg       0.76      0.62      0.66       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.91
+Running RandomizedSearch RandomForest Classification on DummyEncoded_MinMaxScaling
+Best n_estimators: 960
+Best max_features: sqrt
+Best max_depth: 90
+Best min_samples_split: 5
+Best min_samples_leaf: 2
+Best bootstrap: True
+Confusion Martix for Best Randomized RandomForest Classification model on DummyEncoded_MinMaxScaling
+[[792  15]
+ [ 81  17]]
+Training Accuracy for Best Randomized RandomForest Classification Model on DummyEncoded_MinMaxScaling
+0.9621128318584071
+Training Log Loss for Best Randomized RandomForest Classification Model on DummyEncoded_MinMaxScaling
+1.3085766498064701
+Accuracy for Best Randomized RandomForest Classification Model on DummyEncoded_MinMaxScaling
+0.8939226519337017
+Log Loss for Best Randomized RandomForest Classification Model on DummyEncoded_MinMaxScaling
+3.6637950584230707
+Classification Report for Randomized RandomForest Classification Model on DummyEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.91      0.98      0.94       807
+           1       0.53      0.17      0.26        98
+
+    accuracy                           0.89       905
+   macro avg       0.72      0.58      0.60       905
+weighted avg       0.87      0.89      0.87       905
+
+AUC: 0.92
+        age   balance  ...  poutcome_success  poutcome_unknown
+0  0.161765  0.068455  ...                 0                 1
+1  0.205882  0.108750  ...                 0                 0
+2  0.235294  0.062590  ...                 0                 0
+3  0.161765  0.064281  ...                 0                 1
+4  0.588235  0.044469  ...                 0                 1
+
+[5 rows x 51 columns]
+Running Standard RandomForest Classification on DummyEncoded_MinMaxScaling_SMOTE
+Confusion Martix for Standard RandomForest Classification model on DummyEncoded_MinMaxScaling_SMOTE
+[[753  54]
+ [ 57  41]]
+Training Accuracy for Standard RandomForest Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+1.0
+Training Log loss for Standard RandomForest Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+9.992007221626413e-16
+Accuracy for Standard RandomForest Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+0.8773480662983425
+Log loss for Standard RandomForest Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+4.236295423310847
+Classification Report for Standard RandomForest Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.93      0.93      0.93       807
+           1       0.43      0.42      0.42        98
+
+    accuracy                           0.88       905
+   macro avg       0.68      0.68      0.68       905
+weighted avg       0.88      0.88      0.88       905
+
+AUC: 0.90
+Running RandomizedSearch RandomForest Classification on DummyEncoded_MinMaxScaling_SMOTE
+Best n_estimators: 950
+Best max_features: sqrt
+Best max_depth: 90
+Best min_samples_split: 10
+Best min_samples_leaf: 1
+Best bootstrap: False
+Confusion Martix for Best Randomized RandomForest Classification model on DummyEncoded_MinMaxScaling_SMOTE
+[[763  44]
+ [ 57  41]]
+Training Accuracy for Best Randomized RandomForest Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+0.9998434074538052
+Training Log Loss for Best Randomized RandomForest Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+0.005408514938132957
+Accuracy for Best Randomized RandomForest Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+0.8883977900552487
+Log Loss for Best Randomized RandomForest Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+3.854642649914816
+Classification Report for Randomized RandomForest Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.93      0.95      0.94       807
+           1       0.48      0.42      0.45        98
+
+    accuracy                           0.89       905
+   macro avg       0.71      0.68      0.69       905
+weighted avg       0.88      0.89      0.88       905
+
+AUC: 0.91
+   age  balance  day  ...  poutcome_other  poutcome_success  poutcome_unknown
+0   30     1787   19  ...               0                 0                 1
+1   33     4789   11  ...               0                 0                 0
+2   35     1350   16  ...               0                 0                 0
+3   30     1476    3  ...               0                 0                 1
+4   59        0    5  ...               0                 0                 1
+
+[5 rows x 51 columns]
+Running Standard RandomForest Classification on DummyEncoded_SMOTE
+Confusion Martix for Standard RandomForest Classification model on DummyEncoded_SMOTE
+[[784  23]
+ [ 67  31]]
+Training Accuracy for Standard RandomForest Classification Model on DummyEncoded_SMOTE
+1.0
+Training Log loss for Standard RandomForest Classification Model on DummyEncoded_SMOTE
+9.992007221626413e-16
+Accuracy for Standard RandomForest Classification Model on DummyEncoded_SMOTE
+0.9005524861878453
+Log loss for Standard RandomForest Classification Model on DummyEncoded_SMOTE
+3.43481576384846
+Classification Report for Standard RandomForest Classification Model on DummyEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.92      0.97      0.95       807
+           1       0.57      0.32      0.41        98
+
+    accuracy                           0.90       905
+   macro avg       0.75      0.64      0.68       905
+weighted avg       0.88      0.90      0.89       905
+
+AUC: 0.91
+Running RandomizedSearch RandomForest Classification on DummyEncoded_SMOTE
+Best n_estimators: 910
+Best max_features: sqrt
+Best max_depth: 110
+Best min_samples_split: 10
+Best min_samples_leaf: 2
+Best bootstrap: False
+Confusion Martix for Best Randomized RandomForest Classification model on DummyEncoded_SMOTE
+[[780  27]
+ [ 67  31]]
+Training Accuracy for Best Randomized RandomForest Classification Model on DummyEncoded_SMOTE
+0.9915440025054807
+Training Log Loss for Best Randomized RandomForest Classification Model on DummyEncoded_SMOTE
+0.2920601822921193
+Accuracy for Best Randomized RandomForest Classification Model on DummyEncoded_SMOTE
+0.8961325966850828
+Log Loss for Best Randomized RandomForest Classification Model on DummyEncoded_SMOTE
+3.5874768732068723
+Classification Report for Randomized RandomForest Classification Model on DummyEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.92      0.97      0.94       807
+           1       0.53      0.32      0.40        98
+
+    accuracy                           0.90       905
+   macro avg       0.73      0.64      0.67       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.92
+   age  balance  day  ...  poutcome_other  poutcome_success  poutcome_unknown
+0   30     1787   19  ...               0                 0                 1
+1   33     4789   11  ...               0                 0                 0
+2   35     1350   16  ...               0                 0                 0
+3   30     1476    3  ...               0                 0                 1
+4   59        0    5  ...               0                 0                 1
+
+[5 rows x 51 columns]
+Running Standard RandomForest Classification on DummyEncoded
+Confusion Martix for Standard RandomForest Classification model on DummyEncoded
+[[790  17]
+ [ 73  25]]
+Training Accuracy for Standard RandomForest Classification Model on DummyEncoded
+1.0
+Training Log loss for Standard RandomForest Classification Model on DummyEncoded
+9.992007221626413e-16
+Accuracy for Standard RandomForest Classification Model on DummyEncoded
+0.9005524861878453
+Log loss for Standard RandomForest Classification Model on DummyEncoded
+3.434810462650028
+Classification Report for Standard RandomForest Classification Model on DummyEncoded
+              precision    recall  f1-score   support
+
+           0       0.92      0.98      0.95       807
+           1       0.60      0.26      0.36        98
+
+    accuracy                           0.90       905
+   macro avg       0.76      0.62      0.65       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.91
+Running RandomizedSearch RandomForest Classification on DummyEncoded
+Best n_estimators: 960
+Best max_features: sqrt
+Best max_depth: 90
+Best min_samples_split: 5
+Best min_samples_leaf: 2
+Best bootstrap: True
+Confusion Martix for Best Randomized RandomForest Classification model on DummyEncoded
+[[792  15]
+ [ 81  17]]
+Training Accuracy for Best Randomized RandomForest Classification Model on DummyEncoded
+0.9621128318584071
+Training Log Loss for Best Randomized RandomForest Classification Model on DummyEncoded
+1.3085766498064701
+Accuracy for Best Randomized RandomForest Classification Model on DummyEncoded
+0.8939226519337017
+Log Loss for Best Randomized RandomForest Classification Model on DummyEncoded
+3.6637950584230707
+Classification Report for Randomized RandomForest Classification Model on DummyEncoded
+              precision    recall  f1-score   support
+
+           0       0.91      0.98      0.94       807
+           1       0.53      0.17      0.26        98
+
+    accuracy                           0.89       905
+   macro avg       0.72      0.58      0.60       905
+weighted avg       0.87      0.89      0.87       905
+
+AUC: 0.92
+   job_admin.  job_blue-collar  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0           0                0  ...                      0                      0
+1           0                0  ...                      0                      0
+2           0                0  ...                      0                      0
+3           0                0  ...                      0                      0
+4           0                1  ...                      0                      0
+
+[5 rows x 72 columns]
+Running Standard RandomForest Classification on DummyEncoded_Binning
+Confusion Martix for Standard RandomForest Classification model on DummyEncoded_Binning
+[[780  27]
+ [ 71  27]]
+Training Accuracy for Standard RandomForest Classification Model on DummyEncoded_Binning
+0.9842367256637168
+Training Log loss for Standard RandomForest Classification Model on DummyEncoded_Binning
+0.5444455343181674
+Accuracy for Standard RandomForest Classification Model on DummyEncoded_Binning
+0.8917127071823204
+Log loss for Standard RandomForest Classification Model on DummyEncoded_Binning
+3.7401344484329972
+Classification Report for Standard RandomForest Classification Model on DummyEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.92      0.97      0.94       807
+           1       0.50      0.28      0.36        98
+
+    accuracy                           0.89       905
+   macro avg       0.71      0.62      0.65       905
+weighted avg       0.87      0.89      0.88       905
+
+AUC: 0.81
+Running RandomizedSearch RandomForest Classification on DummyEncoded_Binning
+Best n_estimators: 240
+Best max_features: sqrt
+Best max_depth: 90
+Best min_samples_split: 5
+Best min_samples_leaf: 4
+Best bootstrap: True
+Confusion Martix for Best Randomized RandomForest Classification model on DummyEncoded_Binning
+[[790  17]
+ [ 77  21]]
+Training Accuracy for Best Randomized RandomForest Classification Model on DummyEncoded_Binning
+0.9128871681415929
+Training Log Loss for Best Randomized RandomForest Classification Model on DummyEncoded_Binning
+3.0087776967684277
+Accuracy for Best Randomized RandomForest Classification Model on DummyEncoded_Binning
+0.8961325966850828
+Log Loss for Best Randomized RandomForest Classification Model on DummyEncoded_Binning
+3.5874680378761523
+Classification Report for Randomized RandomForest Classification Model on DummyEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.91      0.98      0.94       807
+           1       0.55      0.21      0.31        98
+
+    accuracy                           0.90       905
+   macro avg       0.73      0.60      0.63       905
+weighted avg       0.87      0.90      0.88       905
+
+AUC: 0.83
+   job_admin.  job_blue-collar  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0           0                0  ...                      0                      0
+1           0                0  ...                      0                      0
+2           0                0  ...                      0                      0
+3           0                0  ...                      0                      0
+4           0                1  ...                      0                      0
+
+[5 rows x 72 columns]
+Running Standard RandomForest Classification on DummyEncoded_Binning_SMOTE
+Confusion Martix for Standard RandomForest Classification model on DummyEncoded_Binning_SMOTE
+[[763  44]
+ [ 63  35]]
+Training Accuracy for Standard RandomForest Classification Model on DummyEncoded_Binning_SMOTE
+0.9909176323207015
+Training Log loss for Standard RandomForest Classification Model on DummyEncoded_Binning_SMOTE
+0.3136953689436248
+Accuracy for Standard RandomForest Classification Model on DummyEncoded_Binning_SMOTE
+0.881767955801105
+Log loss for Standard RandomForest Classification Model on DummyEncoded_Binning_SMOTE
+4.0836290127540025
+Classification Report for Standard RandomForest Classification Model on DummyEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.92      0.95      0.93       807
+           1       0.44      0.36      0.40        98
+
+    accuracy                           0.88       905
+   macro avg       0.68      0.65      0.66       905
+weighted avg       0.87      0.88      0.88       905
+
+AUC: 0.82
+Running RandomizedSearch RandomForest Classification on DummyEncoded_Binning_SMOTE
+Best n_estimators: 950
+Best max_features: sqrt
+Best max_depth: 90
+Best min_samples_split: 10
+Best min_samples_leaf: 1
+Best bootstrap: False
+Confusion Martix for Best Randomized RandomForest Classification model on DummyEncoded_Binning_SMOTE
+[[768  39]
+ [ 62  36]]
+Training Accuracy for Best Randomized RandomForest Classification Model on DummyEncoded_Binning_SMOTE
+0.9782336360789227
+Training Log Loss for Best Randomized RandomForest Classification Model on DummyEncoded_Binning_SMOTE
+0.751785955409296
+Accuracy for Best Randomized RandomForest Classification Model on DummyEncoded_Binning_SMOTE
+0.8883977900552487
+Log Loss for Best Randomized RandomForest Classification Model on DummyEncoded_Binning_SMOTE
+3.8546382322494557
+Classification Report for Randomized RandomForest Classification Model on DummyEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.93      0.95      0.94       807
+           1       0.48      0.37      0.42        98
+
+    accuracy                           0.89       905
+   macro avg       0.70      0.66      0.68       905
+weighted avg       0.88      0.89      0.88       905
+
+AUC: 0.82
+        age  job  marital  education  ...  campaign     pdays  previous  poutcome
+0  0.161765   10        1          0  ...  0.000000  0.000000      0.00         3
+1  0.205882    7        1          1  ...  0.000000  0.389908      0.16         0
+2  0.235294    4        2          2  ...  0.000000  0.379587      0.04         0
+3  0.161765    4        1          2  ...  0.061224  0.000000      0.00         3
+4  0.588235    1        1          1  ...  0.000000  0.000000      0.00         3
+
+[5 rows x 16 columns]
+Running Standard RandomForest Classification on LabeEncoded_MinMaxScaling
+Confusion Martix for Standard RandomForest Classification model on LabeEncoded_MinMaxScaling
+[[790  17]
+ [ 71  27]]
+Training Accuracy for Standard RandomForest Classification Model on LabeEncoded_MinMaxScaling
+1.0
+Training Log loss for Standard RandomForest Classification Model on LabeEncoded_MinMaxScaling
+9.992007221626413e-16
+Accuracy for Standard RandomForest Classification Model on LabeEncoded_MinMaxScaling
+0.9027624309392265
+Log loss for Standard RandomForest Classification Model on LabeEncoded_MinMaxScaling
+3.3584816750369653
+Classification Report for Standard RandomForest Classification Model on LabeEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.92      0.98      0.95       807
+           1       0.61      0.28      0.38        98
+
+    accuracy                           0.90       905
+   macro avg       0.77      0.63      0.66       905
+weighted avg       0.88      0.90      0.89       905
+
+AUC: 0.91
+Running RandomizedSearch RandomForest Classification on LabeEncoded_MinMaxScaling
+Best n_estimators: 660
+Best max_features: auto
+Best max_depth: 40
+Best min_samples_split: 10
+Best min_samples_leaf: 4
+Best bootstrap: True
+Confusion Martix for Best Randomized RandomForest Classification model on LabeEncoded_MinMaxScaling
+[[790  17]
+ [ 74  24]]
+Training Accuracy for Best Randomized RandomForest Classification Model on LabeEncoded_MinMaxScaling
+0.9474557522123894
+Training Log Loss for Best Randomized RandomForest Classification Model on LabeEncoded_MinMaxScaling
+1.8148157941959275
+Accuracy for Best Randomized RandomForest Classification Model on LabeEncoded_MinMaxScaling
+0.8994475138121547
+Log Loss for Best Randomized RandomForest Classification Model on LabeEncoded_MinMaxScaling
+3.472974856456559
+Classification Report for Randomized RandomForest Classification Model on LabeEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.91      0.98      0.95       807
+           1       0.59      0.24      0.35        98
+
+    accuracy                           0.90       905
+   macro avg       0.75      0.61      0.65       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.92
+        age  job  marital  education  ...  campaign     pdays  previous  poutcome
+0  0.161765   10        1          0  ...  0.000000  0.000000      0.00         3
+1  0.205882    7        1          1  ...  0.000000  0.389908      0.16         0
+2  0.235294    4        2          2  ...  0.000000  0.379587      0.04         0
+3  0.161765    4        1          2  ...  0.061224  0.000000      0.00         3
+4  0.588235    1        1          1  ...  0.000000  0.000000      0.00         3
+
+[5 rows x 16 columns]
+Running Standard RandomForest Classification on LabelEncoded_MinMaxScaling_SMOTE
+Confusion Martix for Standard RandomForest Classification model on LabelEncoded_MinMaxScaling_SMOTE
+[[732  75]
+ [ 48  50]]
+Training Accuracy for Standard RandomForest Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+1.0
+Training Log loss for Standard RandomForest Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+9.992007221626413e-16
+Accuracy for Standard RandomForest Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+0.8640883977900552
+Log loss for Standard RandomForest Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+4.694286703183734
+Classification Report for Standard RandomForest Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.94      0.91      0.92       807
+           1       0.40      0.51      0.45        98
+
+    accuracy                           0.86       905
+   macro avg       0.67      0.71      0.69       905
+weighted avg       0.88      0.86      0.87       905
+
+AUC: 0.90
+Running RandomizedSearch RandomForest Classification on LabelEncoded_MinMaxScaling_SMOTE
+Best n_estimators: 590
+Best max_features: auto
+Best max_depth: 100
+Best min_samples_split: 2
+Best min_samples_leaf: 2
+Best bootstrap: False
+Confusion Martix for Best Randomized RandomForest Classification model on LabelEncoded_MinMaxScaling_SMOTE
+[[741  66]
+ [ 47  51]]
+Training Accuracy for Best Randomized RandomForest Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+1.0
+Training Log Loss for Best Randomized RandomForest Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+9.992007221626413e-16
+Accuracy for Best Randomized RandomForest Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+0.8751381215469614
+Log Loss for Best Randomized RandomForest Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+4.312634813320774
+Classification Report for Randomized RandomForest Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.94      0.92      0.93       807
+           1       0.44      0.52      0.47        98
+
+    accuracy                           0.88       905
+   macro avg       0.69      0.72      0.70       905
+weighted avg       0.89      0.88      0.88       905
+
+AUC: 0.90
+   age  job  marital  education  ...  campaign  pdays  previous  poutcome
+0   30   10        1          0  ...         1     -1         0         3
+1   33    7        1          1  ...         1    339         4         0
+2   35    4        2          2  ...         1    330         1         0
+3   30    4        1          2  ...         4     -1         0         3
+4   59    1        1          1  ...         1     -1         0         3
+
+[5 rows x 16 columns]
+Running Standard RandomForest Classification on LabelEncoded_SMOTE
+Confusion Martix for Standard RandomForest Classification model on LabelEncoded_SMOTE
+[[741  66]
+ [ 45  53]]
+Training Accuracy for Standard RandomForest Classification Model on LabelEncoded_SMOTE
+1.0
+Training Log loss for Standard RandomForest Classification Model on LabelEncoded_SMOTE
+9.992007221626413e-16
+Accuracy for Standard RandomForest Classification Model on LabelEncoded_SMOTE
+0.8773480662983425
+Log loss for Standard RandomForest Classification Model on LabelEncoded_SMOTE
+4.236306025707711
+Classification Report for Standard RandomForest Classification Model on LabelEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.94      0.92      0.93       807
+           1       0.45      0.54      0.49        98
+
+    accuracy                           0.88       905
+   macro avg       0.69      0.73      0.71       905
+weighted avg       0.89      0.88      0.88       905
+
+AUC: 0.89
+Running RandomizedSearch RandomForest Classification on LabelEncoded_SMOTE
+Best n_estimators: 590
+Best max_features: auto
+Best max_depth: 100
+Best min_samples_split: 2
+Best min_samples_leaf: 2
+Best bootstrap: False
+Confusion Martix for Best Randomized RandomForest Classification model on LabelEncoded_SMOTE
+[[740  67]
+ [ 48  50]]
+Training Accuracy for Best Randomized RandomForest Classification Model on LabelEncoded_SMOTE
+1.0
+Training Log Loss for Best Randomized RandomForest Classification Model on LabelEncoded_SMOTE
+9.992007221626413e-16
+Accuracy for Best Randomized RandomForest Classification Model on LabelEncoded_SMOTE
+0.8729281767955801
+Log Loss for Best Randomized RandomForest Classification Model on LabelEncoded_SMOTE
+4.388964484466908
+Classification Report for Randomized RandomForest Classification Model on LabelEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.94      0.92      0.93       807
+           1       0.43      0.51      0.47        98
+
+    accuracy                           0.87       905
+   macro avg       0.68      0.71      0.70       905
+weighted avg       0.88      0.87      0.88       905
+
+AUC: 0.90
+   age  job  marital  education  ...  campaign  pdays  previous  poutcome
+0   30   10        1          0  ...         1     -1         0         3
+1   33    7        1          1  ...         1    339         4         0
+2   35    4        2          2  ...         1    330         1         0
+3   30    4        1          2  ...         4     -1         0         3
+4   59    1        1          1  ...         1     -1         0         3
+
+[5 rows x 16 columns]
+Running Standard RandomForest Classification on LabelEncoded
+Confusion Martix for Standard RandomForest Classification model on LabelEncoded
+[[790  17]
+ [ 72  26]]
+Training Accuracy for Standard RandomForest Classification Model on LabelEncoded
+1.0
+Training Log loss for Standard RandomForest Classification Model on LabelEncoded
+9.992007221626413e-16
+Accuracy for Standard RandomForest Classification Model on LabelEncoded
+0.901657458563536
+Log loss for Standard RandomForest Classification Model on LabelEncoded
+3.3966460688434963
+Classification Report for Standard RandomForest Classification Model on LabelEncoded
+              precision    recall  f1-score   support
+
+           0       0.92      0.98      0.95       807
+           1       0.60      0.27      0.37        98
+
+    accuracy                           0.90       905
+   macro avg       0.76      0.62      0.66       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.91
+Running RandomizedSearch RandomForest Classification on LabelEncoded
+Best n_estimators: 660
+Best max_features: auto
+Best max_depth: 40
+Best min_samples_split: 10
+Best min_samples_leaf: 4
+Best bootstrap: True
+Confusion Martix for Best Randomized RandomForest Classification model on LabelEncoded
+[[790  17]
+ [ 74  24]]
+Training Accuracy for Best Randomized RandomForest Classification Model on LabelEncoded
+0.9474557522123894
+Training Log Loss for Best Randomized RandomForest Classification Model on LabelEncoded
+1.8148157941959275
+Accuracy for Best Randomized RandomForest Classification Model on LabelEncoded
+0.8994475138121547
+Log Loss for Best Randomized RandomForest Classification Model on LabelEncoded
+3.472974856456559
+Classification Report for Randomized RandomForest Classification Model on LabelEncoded
+              precision    recall  f1-score   support
+
+           0       0.91      0.98      0.95       807
+           1       0.59      0.24      0.35        98
+
+    accuracy                           0.90       905
+   macro avg       0.75      0.61      0.65       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.92
+   job  marital  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0   10        1  ...                      0                      0
+1    7        1  ...                      0                      0
+2    4        2  ...                      0                      0
+3    4        1  ...                      0                      0
+4    1        1  ...                      0                      0
+
+[5 rows x 37 columns]
+Running Standard RandomForest Classification on LabelEncoded_Binning
+Confusion Martix for Standard RandomForest Classification model on LabelEncoded_Binning
+[[776  31]
+ [ 71  27]]
+Training Accuracy for Standard RandomForest Classification Model on LabelEncoded_Binning
+0.9842367256637168
+Training Log loss for Standard RandomForest Classification Model on LabelEncoded_Binning
+0.5444461977009911
+Accuracy for Standard RandomForest Classification Model on LabelEncoded_Binning
+0.887292817679558
+Log loss for Standard RandomForest Classification Model on LabelEncoded_Binning
+3.8927955577914104
+Classification Report for Standard RandomForest Classification Model on LabelEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.92      0.96      0.94       807
+           1       0.47      0.28      0.35        98
+
+    accuracy                           0.89       905
+   macro avg       0.69      0.62      0.64       905
+weighted avg       0.87      0.89      0.87       905
+
+AUC: 0.80
+Running RandomizedSearch RandomForest Classification on LabelEncoded_Binning
+Best n_estimators: 960
+Best max_features: sqrt
+Best max_depth: 90
+Best min_samples_split: 5
+Best min_samples_leaf: 2
+Best bootstrap: True
+Confusion Martix for Best Randomized RandomForest Classification model on LabelEncoded_Binning
+[[787  20]
+ [ 75  23]]
+Training Accuracy for Best Randomized RandomForest Classification Model on LabelEncoded_Binning
+0.9303097345132744
+Training Log Loss for Best Randomized RandomForest Classification Model on LabelEncoded_Binning
+2.407018707824059
+Accuracy for Best Randomized RandomForest Classification Model on LabelEncoded_Binning
+0.8950276243093923
+Log Loss for Best Randomized RandomForest Classification Model on LabelEncoded_Binning
+3.6256350822819
+Classification Report for Randomized RandomForest Classification Model on LabelEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.91      0.98      0.94       807
+           1       0.53      0.23      0.33        98
+
+    accuracy                           0.90       905
+   macro avg       0.72      0.60      0.63       905
+weighted avg       0.87      0.90      0.88       905
+
+AUC: 0.81
+   job  marital  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0   10        1  ...                      0                      0
+1    7        1  ...                      0                      0
+2    4        2  ...                      0                      0
+3    4        1  ...                      0                      0
+4    1        1  ...                      0                      0
+
+[5 rows x 37 columns]
+Running Standard RandomForest Classification on LabelEncoded_Binning_SMOTE
+Confusion Martix for Standard RandomForest Classification model on LabelEncoded_Binning_SMOTE
+[[741  66]
+ [ 59  39]]
+Training Accuracy for Standard RandomForest Classification Model on LabelEncoded_Binning_SMOTE
+0.9860632633886627
+Training Log loss for Standard RandomForest Classification Model on LabelEncoded_Binning_SMOTE
+0.48136271272264863
+Accuracy for Standard RandomForest Classification Model on LabelEncoded_Binning_SMOTE
+0.861878453038674
+Log loss for Standard RandomForest Classification Model on LabelEncoded_Binning_SMOTE
+4.770607538999148
+Classification Report for Standard RandomForest Classification Model on LabelEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.93      0.92      0.92       807
+           1       0.37      0.40      0.38        98
+
+    accuracy                           0.86       905
+   macro avg       0.65      0.66      0.65       905
+weighted avg       0.87      0.86      0.86       905
+
+AUC: 0.81
+Running RandomizedSearch RandomForest Classification on LabelEncoded_Binning_SMOTE
+Best n_estimators: 950
+Best max_features: sqrt
+Best max_depth: 90
+Best min_samples_split: 10
+Best min_samples_leaf: 1
+Best bootstrap: False
+Confusion Martix for Best Randomized RandomForest Classification model on LabelEncoded_Binning_SMOTE
+[[754  53]
+ [ 58  40]]
+Training Accuracy for Best Randomized RandomForest Classification Model on LabelEncoded_Binning_SMOTE
+0.978703413717507
+Training Log Loss for Best Randomized RandomForest Classification Model on LabelEncoded_Binning_SMOTE
+0.7355629148148507
+Accuracy for Best Randomized RandomForest Classification Model on LabelEncoded_Binning_SMOTE
+0.8773480662983425
+Log Loss for Best Randomized RandomForest Classification Model on LabelEncoded_Binning_SMOTE
+4.2362945397777745
+Classification Report for Randomized RandomForest Classification Model on LabelEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.93      0.93      0.93       807
+           1       0.43      0.41      0.42        98
+
+    accuracy                           0.88       905
+   macro avg       0.68      0.67      0.68       905
+weighted avg       0.87      0.88      0.88       905
+
+AUC: 0.81
+
+Process finished with exit code 0

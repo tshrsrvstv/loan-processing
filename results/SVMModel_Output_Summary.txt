@@ -1,0 +1,376 @@
+C:\Users\e01703\AppData\Local\Continuum\anaconda3\python.exe "C:/AIML/Capstone Project Loan Processing/CodeBase/loan-processing/model/SVMModel.py"
+Using TensorFlow backend.
+        age   balance  ...  poutcome_success  poutcome_unknown
+0  0.161765  0.068455  ...                 0                 1
+1  0.205882  0.108750  ...                 0                 0
+2  0.235294  0.062590  ...                 0                 0
+3  0.161765  0.064281  ...                 0                 1
+4  0.588235  0.044469  ...                 0                 1
+
+[5 rows x 51 columns]
+Running Standard SVM Classification on DummyEncoded_MinMaxScaling
+Confusion Martix for Standard SVM Classification model on DummyEncoded_MinMaxScaling
+[[796  11]
+ [ 85  13]]
+Training Accuracy for Standard SVM Classification Model on DummyEncoded_MinMaxScaling
+0.8935287610619469
+Training Log loss for Standard SVM Classification Model on DummyEncoded_MinMaxScaling
+3.677393611381585
+Accuracy for Standard SVM Classification Model on DummyEncoded_MinMaxScaling
+0.8939226519337017
+Log loss for Standard SVM Classification Model on DummyEncoded_MinMaxScaling
+3.663791524290782
+Classification Report for Standard SVM Classification Model on DummyEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.90      0.99      0.94       807
+           1       0.54      0.13      0.21        98
+
+    accuracy                           0.89       905
+   macro avg       0.72      0.56      0.58       905
+weighted avg       0.86      0.89      0.86       905
+
+AUC: 0.88
+        age   balance  ...  poutcome_success  poutcome_unknown
+0  0.161765  0.068455  ...                 0                 1
+1  0.205882  0.108750  ...                 0                 0
+2  0.235294  0.062590  ...                 0                 0
+3  0.161765  0.064281  ...                 0                 1
+4  0.588235  0.044469  ...                 0                 1
+
+[5 rows x 51 columns]
+Running Standard SVM Classification on DummyEncoded_MinMaxScaling_SMOTE
+Confusion Martix for Standard SVM Classification model on DummyEncoded_MinMaxScaling_SMOTE
+[[786  21]
+ [ 81  17]]
+Training Accuracy for Standard SVM Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+0.9384591293454432
+Training Log loss for Standard SVM Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+2.125553257290724
+Accuracy for Standard SVM Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+0.887292817679558
+Log loss for Standard SVM Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+3.892786722460689
+Classification Report for Standard SVM Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.91      0.97      0.94       807
+           1       0.45      0.17      0.25        98
+
+    accuracy                           0.89       905
+   macro avg       0.68      0.57      0.59       905
+weighted avg       0.86      0.89      0.86       905
+
+AUC: 0.85
+   age  balance  day  ...  poutcome_other  poutcome_success  poutcome_unknown
+0   30     1787   19  ...               0                 0                 1
+1   33     4789   11  ...               0                 0                 0
+2   35     1350   16  ...               0                 0                 0
+3   30     1476    3  ...               0                 0                 1
+4   59        0    5  ...               0                 0                 1
+
+[5 rows x 51 columns]
+Running Standard SVM Classification on DummyEncoded_SMOTE
+Confusion Martix for Standard SVM Classification model on DummyEncoded_SMOTE
+[[639 168]
+ [ 28  70]]
+Training Accuracy for Standard SVM Classification Model on DummyEncoded_SMOTE
+0.7528969621046038
+Training Log loss for Standard SVM Classification Model on DummyEncoded_SMOTE
+8.534724720914486
+Accuracy for Standard SVM Classification Model on DummyEncoded_SMOTE
+0.7834254143646409
+Log loss for Standard SVM Classification Model on DummyEncoded_SMOTE
+7.480369619636206
+Classification Report for Standard SVM Classification Model on DummyEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.96      0.79      0.87       807
+           1       0.29      0.71      0.42        98
+
+    accuracy                           0.78       905
+   macro avg       0.63      0.75      0.64       905
+weighted avg       0.89      0.78      0.82       905
+
+AUC: 0.84
+   age  balance  day  ...  poutcome_other  poutcome_success  poutcome_unknown
+0   30     1787   19  ...               0                 0                 1
+1   33     4789   11  ...               0                 0                 0
+2   35     1350   16  ...               0                 0                 0
+3   30     1476    3  ...               0                 0                 1
+4   59        0    5  ...               0                 0                 1
+
+[5 rows x 51 columns]
+Running Standard SVM Classification on DummyEncoded
+Confusion Martix for Standard SVM Classification model on DummyEncoded
+[[806   1]
+ [ 98   0]]
+Training Accuracy for Standard SVM Classification Model on DummyEncoded
+0.8835730088495575
+Training Log loss for Standard SVM Classification Model on DummyEncoded
+4.021245813677378
+Accuracy for Standard SVM Classification Model on DummyEncoded
+0.8906077348066298
+Log loss for Standard SVM Classification Model on DummyEncoded
+3.7782758703796557
+Classification Report for Standard SVM Classification Model on DummyEncoded
+              precision    recall  f1-score   support
+
+           0       0.89      1.00      0.94       807
+           1       0.00      0.00      0.00        98
+
+    accuracy                           0.89       905
+   macro avg       0.45      0.50      0.47       905
+weighted avg       0.80      0.89      0.84       905
+
+AUC: 0.62
+   job_admin.  job_blue-collar  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0           0                0  ...                      0                      0
+1           0                0  ...                      0                      0
+2           0                0  ...                      0                      0
+3           0                0  ...                      0                      0
+4           0                1  ...                      0                      0
+
+[5 rows x 72 columns]
+Running Standard SVM Classification on DummyEncoded_Binning
+Confusion Martix for Standard SVM Classification model on DummyEncoded_Binning
+[[779  28]
+ [ 65  33]]
+Training Accuracy for Standard SVM Classification Model on DummyEncoded_Binning
+0.9076327433628318
+Training Log loss for Standard SVM Classification Model on DummyEncoded_Binning
+3.1902670598798184
+Accuracy for Standard SVM Classification Model on DummyEncoded_Binning
+0.8972375690607735
+Log loss for Standard SVM Classification Model on DummyEncoded_Binning
+3.5493133629334137
+Classification Report for Standard SVM Classification Model on DummyEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.92      0.97      0.94       807
+           1       0.54      0.34      0.42        98
+
+    accuracy                           0.90       905
+   macro avg       0.73      0.65      0.68       905
+weighted avg       0.88      0.90      0.89       905
+
+AUC: 0.83
+   job_admin.  job_blue-collar  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0           0                0  ...                      0                      0
+1           0                0  ...                      0                      0
+2           0                0  ...                      0                      0
+3           0                0  ...                      0                      0
+4           0                1  ...                      0                      0
+
+[5 rows x 72 columns]
+Running Standard SVM Classification on DummyEncoded_Binning_SMOTE
+Confusion Martix for Standard SVM Classification model on DummyEncoded_Binning_SMOTE
+[[807   0]
+ [ 98   0]]
+Training Accuracy for Standard SVM Classification Model on DummyEncoded_Binning_SMOTE
+0.8989978077043532
+Training Log loss for Standard SVM Classification Model on DummyEncoded_Binning_SMOTE
+3.4884921350951132
+Accuracy for Standard SVM Classification Model on DummyEncoded_Binning_SMOTE
+0.8917127071823204
+Log loss for Standard SVM Classification Model on DummyEncoded_Binning_SMOTE
+3.740110593040052
+Classification Report for Standard SVM Classification Model on DummyEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.89      1.00      0.94       807
+           1       0.00      0.00      0.00        98
+
+    accuracy                           0.89       905
+   macro avg       0.45      0.50      0.47       905
+weighted avg       0.80      0.89      0.84       905
+
+AUC: 0.69
+        age  job  marital  education  ...  campaign     pdays  previous  poutcome
+0  0.161765   10        1          0  ...  0.000000  0.000000      0.00         3
+1  0.205882    7        1          1  ...  0.000000  0.389908      0.16         0
+2  0.235294    4        2          2  ...  0.000000  0.379587      0.04         0
+3  0.161765    4        1          2  ...  0.061224  0.000000      0.00         3
+4  0.588235    1        1          1  ...  0.000000  0.000000      0.00         3
+
+[5 rows x 16 columns]
+Running Standard SVM Classification on LabeEncoded_MinMaxScaling
+Confusion Martix for Standard SVM Classification model on LabeEncoded_MinMaxScaling
+[[807   0]
+ [ 98   0]]
+Training Accuracy for Standard SVM Classification Model on LabeEncoded_MinMaxScaling
+0.8830199115044248
+Training Log loss for Standard SVM Classification Model on LabeEncoded_MinMaxScaling
+4.040349119205537
+Accuracy for Standard SVM Classification Model on LabeEncoded_MinMaxScaling
+0.8917127071823204
+Log loss for Standard SVM Classification Model on LabeEncoded_MinMaxScaling
+3.740110593040052
+Classification Report for Standard SVM Classification Model on LabeEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.89      1.00      0.94       807
+           1       0.00      0.00      0.00        98
+
+    accuracy                           0.89       905
+   macro avg       0.45      0.50      0.47       905
+weighted avg       0.80      0.89      0.84       905
+
+AUC: 0.77
+        age  job  marital  education  ...  campaign     pdays  previous  poutcome
+0  0.161765   10        1          0  ...  0.000000  0.000000      0.00         3
+1  0.205882    7        1          1  ...  0.000000  0.389908      0.16         0
+2  0.235294    4        2          2  ...  0.000000  0.379587      0.04         0
+3  0.161765    4        1          2  ...  0.061224  0.000000      0.00         3
+4  0.588235    1        1          1  ...  0.000000  0.000000      0.00         3
+
+[5 rows x 16 columns]
+Running Standard SVM Classification on LabelEncoded_MinMaxScaling_SMOTE
+Confusion Martix for Standard SVM Classification model on LabelEncoded_MinMaxScaling_SMOTE
+[[592 215]
+ [ 35  63]]
+Training Accuracy for Standard SVM Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+0.7936110241152521
+Training Log loss for Standard SVM Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+7.128528116117837
+Accuracy for Standard SVM Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+0.7237569060773481
+Log loss for Standard SVM Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+9.541288411243274
+Classification Report for Standard SVM Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.94      0.73      0.83       807
+           1       0.23      0.64      0.34        98
+
+    accuracy                           0.72       905
+   macro avg       0.59      0.69      0.58       905
+weighted avg       0.87      0.72      0.77       905
+
+AUC: 0.76
+   age  job  marital  education  ...  campaign  pdays  previous  poutcome
+0   30   10        1          0  ...         1     -1         0         3
+1   33    7        1          1  ...         1    339         4         0
+2   35    4        2          2  ...         1    330         1         0
+3   30    4        1          2  ...         4     -1         0         3
+4   59    1        1          1  ...         1     -1         0         3
+
+[5 rows x 16 columns]
+Running Standard SVM Classification on LabelEncoded_SMOTE
+Confusion Martix for Standard SVM Classification model on LabelEncoded_SMOTE
+[[643 164]
+ [ 29  69]]
+Training Accuracy for Standard SVM Classification Model on LabelEncoded_SMOTE
+0.7535233322893831
+Training Log loss for Standard SVM Classification Model on LabelEncoded_SMOTE
+8.513089534262981
+Accuracy for Standard SVM Classification Model on LabelEncoded_SMOTE
+0.7867403314917127
+Log loss for Standard SVM Classification Model on LabelEncoded_SMOTE
+7.365872904084325
+Classification Report for Standard SVM Classification Model on LabelEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.96      0.80      0.87       807
+           1       0.30      0.70      0.42        98
+
+    accuracy                           0.79       905
+   macro avg       0.63      0.75      0.64       905
+weighted avg       0.89      0.79      0.82       905
+
+AUC: 0.84
+   age  job  marital  education  ...  campaign  pdays  previous  poutcome
+0   30   10        1          0  ...         1     -1         0         3
+1   33    7        1          1  ...         1    339         4         0
+2   35    4        2          2  ...         1    330         1         0
+3   30    4        1          2  ...         4     -1         0         3
+4   59    1        1          1  ...         1     -1         0         3
+
+[5 rows x 16 columns]
+Running Standard SVM Classification on LabelEncoded
+Confusion Martix for Standard SVM Classification model on LabelEncoded
+[[806   1]
+ [ 98   0]]
+Training Accuracy for Standard SVM Classification Model on LabelEncoded
+0.8832964601769911
+Training Log loss for Standard SVM Classification Model on LabelEncoded
+4.030797466441458
+Accuracy for Standard SVM Classification Model on LabelEncoded
+0.8906077348066298
+Log loss for Standard SVM Classification Model on LabelEncoded
+3.7782758703796557
+Classification Report for Standard SVM Classification Model on LabelEncoded
+              precision    recall  f1-score   support
+
+           0       0.89      1.00      0.94       807
+           1       0.00      0.00      0.00        98
+
+    accuracy                           0.89       905
+   macro avg       0.45      0.50      0.47       905
+weighted avg       0.80      0.89      0.84       905
+
+AUC: 0.69
+   job  marital  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0   10        1  ...                      0                      0
+1    7        1  ...                      0                      0
+2    4        2  ...                      0                      0
+3    4        1  ...                      0                      0
+4    1        1  ...                      0                      0
+
+[5 rows x 37 columns]
+Running Standard SVM Classification on LabelEncoded_Binning
+Confusion Martix for Standard SVM Classification model on LabelEncoded_Binning
+[[805   2]
+ [ 94   4]]
+Training Accuracy for Standard SVM Classification Model on LabelEncoded_Binning
+0.8857853982300885
+Training Log loss for Standard SVM Classification Model on LabelEncoded_Binning
+3.9448325915647433
+Accuracy for Standard SVM Classification Model on LabelEncoded_Binning
+0.8939226519337017
+Log loss for Standard SVM Classification Model on LabelEncoded_Binning
+3.663783572493134
+Classification Report for Standard SVM Classification Model on LabelEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.90      1.00      0.94       807
+           1       0.67      0.04      0.08        98
+
+    accuracy                           0.89       905
+   macro avg       0.78      0.52      0.51       905
+weighted avg       0.87      0.89      0.85       905
+
+AUC: 0.70
+   job  marital  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0   10        1  ...                      0                      0
+1    7        1  ...                      0                      0
+2    4        2  ...                      0                      0
+3    4        1  ...                      0                      0
+4    1        1  ...                      0                      0
+
+[5 rows x 37 columns]
+Running Standard SVM Classification on LabelEncoded_Binning_SMOTE
+Confusion Martix for Standard SVM Classification model on LabelEncoded_Binning_SMOTE
+[[749  58]
+ [ 59  39]]
+Training Accuracy for Standard SVM Classification Model on LabelEncoded_Binning_SMOTE
+0.892890698402756
+Training Log loss for Standard SVM Classification Model on LabelEncoded_Binning_SMOTE
+3.6994527657896956
+Accuracy for Standard SVM Classification Model on LabelEncoded_Binning_SMOTE
+0.8707182320441988
+Log loss for Standard SVM Classification Model on LabelEncoded_Binning_SMOTE
+4.465285320282322
+Classification Report for Standard SVM Classification Model on LabelEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.93      0.93      0.93       807
+           1       0.40      0.40      0.40        98
+
+    accuracy                           0.87       905
+   macro avg       0.66      0.66      0.66       905
+weighted avg       0.87      0.87      0.87       905
+
+AUC: 0.76
+
+Process finished with exit code 0
