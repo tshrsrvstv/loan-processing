@@ -1,0 +1,376 @@
+C:\Users\e01703\AppData\Local\Continuum\anaconda3\python.exe "C:/AIML/Capstone Project Loan Processing/CodeBase/loan-processing/model/NaiveBayesModel.py"
+Using TensorFlow backend.
+        age   balance  ...  poutcome_success  poutcome_unknown
+0  0.161765  0.068455  ...                 0                 1
+1  0.205882  0.108750  ...                 0                 0
+2  0.235294  0.062590  ...                 0                 0
+3  0.161765  0.064281  ...                 0                 1
+4  0.588235  0.044469  ...                 0                 1
+
+[5 rows x 51 columns]
+Running Standard Naive Bayes Classification on DummyEncoded_MinMaxScaling
+Confusion Martix for Standard Naive Bayes Classification model on DummyEncoded_MinMaxScaling
+[[708  99]
+ [ 60  38]]
+Training Accuracy for Standard Naive Bayes Classification Model on DummyEncoded_MinMaxScaling
+0.8376659292035398
+Training Log loss for Standard Naive Bayes Classification Model on DummyEncoded_MinMaxScaling
+5.606903316495112
+Accuracy for Standard Naive Bayes Classification Model on DummyEncoded_MinMaxScaling
+0.8243093922651934
+Log loss for Standard Naive Bayes Classification Model on DummyEncoded_MinMaxScaling
+6.068226085012584
+Classification Report for Standard Naive Bayes Classification Model on DummyEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.92      0.88      0.90       807
+           1       0.28      0.39      0.32        98
+
+    accuracy                           0.82       905
+   macro avg       0.60      0.63      0.61       905
+weighted avg       0.85      0.82      0.84       905
+
+AUC: 0.75
+        age   balance  ...  poutcome_success  poutcome_unknown
+0  0.161765  0.068455  ...                 0                 1
+1  0.205882  0.108750  ...                 0                 0
+2  0.235294  0.062590  ...                 0                 0
+3  0.161765  0.064281  ...                 0                 1
+4  0.588235  0.044469  ...                 0                 1
+
+[5 rows x 51 columns]
+Running Standard Naive Bayes Classification on DummyEncoded_MinMaxScaling_SMOTE
+Confusion Martix for Standard Naive Bayes Classification model on DummyEncoded_MinMaxScaling_SMOTE
+[[570 237]
+ [ 32  66]]
+Training Accuracy for Standard Naive Bayes Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+0.7842154713435641
+Training Log loss for Standard Naive Bayes Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+7.453045648588623
+Accuracy for Standard Naive Bayes Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+0.7027624309392265
+Log loss for Standard Naive Bayes Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+10.26643133129495
+Classification Report for Standard Naive Bayes Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.95      0.71      0.81       807
+           1       0.22      0.67      0.33        98
+
+    accuracy                           0.70       905
+   macro avg       0.58      0.69      0.57       905
+weighted avg       0.87      0.70      0.76       905
+
+AUC: 0.72
+   age  balance  day  ...  poutcome_other  poutcome_success  poutcome_unknown
+0   30     1787   19  ...               0                 0                 1
+1   33     4789   11  ...               0                 0                 0
+2   35     1350   16  ...               0                 0                 0
+3   30     1476    3  ...               0                 0                 1
+4   59        0    5  ...               0                 0                 1
+
+[5 rows x 51 columns]
+Running Standard Naive Bayes Classification on DummyEncoded_SMOTE
+Confusion Martix for Standard Naive Bayes Classification model on DummyEncoded_SMOTE
+[[724  83]
+ [ 72  26]]
+Training Accuracy for Standard Naive Bayes Classification Model on DummyEncoded_SMOTE
+0.9018164735358597
+Training Log loss for Standard Naive Bayes Classification Model on DummyEncoded_SMOTE
+3.3911744261320353
+Accuracy for Standard Naive Bayes Classification Model on DummyEncoded_SMOTE
+0.8287292817679558
+Log loss for Standard Naive Bayes Classification Model on DummyEncoded_SMOTE
+5.915554373257306
+Classification Report for Standard Naive Bayes Classification Model on DummyEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.91      0.90      0.90       807
+           1       0.24      0.27      0.25        98
+
+    accuracy                           0.83       905
+   macro avg       0.57      0.58      0.58       905
+weighted avg       0.84      0.83      0.83       905
+
+AUC: 0.68
+   age  balance  day  ...  poutcome_other  poutcome_success  poutcome_unknown
+0   30     1787   19  ...               0                 0                 1
+1   33     4789   11  ...               0                 0                 0
+2   35     1350   16  ...               0                 0                 0
+3   30     1476    3  ...               0                 0                 1
+4   59        0    5  ...               0                 0                 1
+
+[5 rows x 51 columns]
+Running Standard Naive Bayes Classification on DummyEncoded
+Confusion Martix for Standard Naive Bayes Classification model on DummyEncoded
+[[709  98]
+ [ 57  41]]
+Training Accuracy for Standard Naive Bayes Classification Model on DummyEncoded
+0.8465154867256637
+Training Log loss for Standard Naive Bayes Classification Model on DummyEncoded
+5.3012464477476335
+Accuracy for Standard Naive Bayes Classification Model on DummyEncoded
+0.8287292817679558
+Log loss for Standard Naive Bayes Classification Model on DummyEncoded
+5.915567626253388
+Classification Report for Standard Naive Bayes Classification Model on DummyEncoded
+              precision    recall  f1-score   support
+
+           0       0.93      0.88      0.90       807
+           1       0.29      0.42      0.35        98
+
+    accuracy                           0.83       905
+   macro avg       0.61      0.65      0.62       905
+weighted avg       0.86      0.83      0.84       905
+
+AUC: 0.77
+   job_admin.  job_blue-collar  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0           0                0  ...                      0                      0
+1           0                0  ...                      0                      0
+2           0                0  ...                      0                      0
+3           0                0  ...                      0                      0
+4           0                1  ...                      0                      0
+
+[5 rows x 72 columns]
+Running Standard Naive Bayes Classification on DummyEncoded_Binning
+Confusion Martix for Standard Naive Bayes Classification model on DummyEncoded_Binning
+[[320 487]
+ [ 11  87]]
+Training Accuracy for Standard Naive Bayes Classification Model on DummyEncoded_Binning
+0.4723451327433628
+Training Log loss for Standard Naive Bayes Classification Model on DummyEncoded_Binning
+18.224967867000487
+Accuracy for Standard Naive Bayes Classification Model on DummyEncoded_Binning
+0.44972375690607735
+Log loss for Standard Naive Bayes Classification Model on DummyEncoded_Binning
+19.00629839625859
+Classification Report for Standard Naive Bayes Classification Model on DummyEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.97      0.40      0.56       807
+           1       0.15      0.89      0.26        98
+
+    accuracy                           0.45       905
+   macro avg       0.56      0.64      0.41       905
+weighted avg       0.88      0.45      0.53       905
+
+AUC: 0.76
+   job_admin.  job_blue-collar  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0           0                0  ...                      0                      0
+1           0                0  ...                      0                      0
+2           0                0  ...                      0                      0
+3           0                0  ...                      0                      0
+4           0                1  ...                      0                      0
+
+[5 rows x 72 columns]
+Running Standard Naive Bayes Classification on DummyEncoded_Binning_SMOTE
+Confusion Martix for Standard Naive Bayes Classification model on DummyEncoded_Binning_SMOTE
+[[801   6]
+ [ 94   4]]
+Training Accuracy for Standard Naive Bayes Classification Model on DummyEncoded_Binning_SMOTE
+0.9218603194487942
+Training Log loss for Standard Naive Bayes Classification Model on DummyEncoded_Binning_SMOTE
+2.69885083229281
+Accuracy for Standard Naive Bayes Classification Model on DummyEncoded_Binning_SMOTE
+0.8895027624309392
+Log loss for Standard Naive Bayes Classification Model on DummyEncoded_Binning_SMOTE
+3.8164446818515465
+Classification Report for Standard Naive Bayes Classification Model on DummyEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.89      0.99      0.94       807
+           1       0.40      0.04      0.07        98
+
+    accuracy                           0.89       905
+   macro avg       0.65      0.52      0.51       905
+weighted avg       0.84      0.89      0.85       905
+
+AUC: 0.70
+        age  job  marital  education  ...  campaign     pdays  previous  poutcome
+0  0.161765   10        1          0  ...  0.000000  0.000000      0.00         3
+1  0.205882    7        1          1  ...  0.000000  0.389908      0.16         0
+2  0.235294    4        2          2  ...  0.000000  0.379587      0.04         0
+3  0.161765    4        1          2  ...  0.061224  0.000000      0.00         3
+4  0.588235    1        1          1  ...  0.000000  0.000000      0.00         3
+
+[5 rows x 16 columns]
+Running Standard Naive Bayes Classification on LabeEncoded_MinMaxScaling
+Confusion Martix for Standard Naive Bayes Classification model on LabeEncoded_MinMaxScaling
+[[704 103]
+ [ 54  44]]
+Training Accuracy for Standard Naive Bayes Classification Model on LabeEncoded_MinMaxScaling
+0.8315818584070797
+Training Log loss for Standard Naive Bayes Classification Model on LabeEncoded_MinMaxScaling
+5.817038792794424
+Accuracy for Standard Naive Bayes Classification Model on LabeEncoded_MinMaxScaling
+0.8265193370165745
+Log loss for Standard Naive Bayes Classification Model on LabeEncoded_MinMaxScaling
+5.991900831531809
+Classification Report for Standard Naive Bayes Classification Model on LabeEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.93      0.87      0.90       807
+           1       0.30      0.45      0.36        98
+
+    accuracy                           0.83       905
+   macro avg       0.61      0.66      0.63       905
+weighted avg       0.86      0.83      0.84       905
+
+AUC: 0.80
+        age  job  marital  education  ...  campaign     pdays  previous  poutcome
+0  0.161765   10        1          0  ...  0.000000  0.000000      0.00         3
+1  0.205882    7        1          1  ...  0.000000  0.389908      0.16         0
+2  0.235294    4        2          2  ...  0.000000  0.379587      0.04         0
+3  0.161765    4        1          2  ...  0.061224  0.000000      0.00         3
+4  0.588235    1        1          1  ...  0.000000  0.000000      0.00         3
+
+[5 rows x 16 columns]
+Running Standard Naive Bayes Classification on LabelEncoded_MinMaxScaling_SMOTE
+Confusion Martix for Standard Naive Bayes Classification model on LabelEncoded_MinMaxScaling_SMOTE
+[[418 389]
+ [ 13  85]]
+Training Accuracy for Standard Naive Bayes Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+0.7262762292514876
+Training Log loss for Standard Naive Bayes Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+9.454268672865014
+Accuracy for Standard Naive Bayes Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+0.5558011049723757
+Log loss for Standard Naive Bayes Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+15.342430004590542
+Classification Report for Standard Naive Bayes Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.97      0.52      0.68       807
+           1       0.18      0.87      0.30        98
+
+    accuracy                           0.56       905
+   macro avg       0.57      0.69      0.49       905
+weighted avg       0.88      0.56      0.63       905
+
+AUC: 0.79
+   age  job  marital  education  ...  campaign  pdays  previous  poutcome
+0   30   10        1          0  ...         1     -1         0         3
+1   33    7        1          1  ...         1    339         4         0
+2   35    4        2          2  ...         1    330         1         0
+3   30    4        1          2  ...         4     -1         0         3
+4   59    1        1          1  ...         1     -1         0         3
+
+[5 rows x 16 columns]
+Running Standard Naive Bayes Classification on LabelEncoded_SMOTE
+Confusion Martix for Standard Naive Bayes Classification model on LabelEncoded_SMOTE
+[[499 308]
+ [ 20  78]]
+Training Accuracy for Standard Naive Bayes Classification Model on LabelEncoded_SMOTE
+0.7652677732539931
+Training Log loss for Standard Naive Bayes Classification Model on LabelEncoded_SMOTE
+8.1075209068507
+Accuracy for Standard Naive Bayes Classification Model on LabelEncoded_SMOTE
+0.6375690607734806
+Log loss for Standard Naive Bayes Classification Model on LabelEncoded_SMOTE
+12.518193296728402
+Classification Report for Standard Naive Bayes Classification Model on LabelEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.96      0.62      0.75       807
+           1       0.20      0.80      0.32        98
+
+    accuracy                           0.64       905
+   macro avg       0.58      0.71      0.54       905
+weighted avg       0.88      0.64      0.71       905
+
+AUC: 0.76
+   age  job  marital  education  ...  campaign  pdays  previous  poutcome
+0   30   10        1          0  ...         1     -1         0         3
+1   33    7        1          1  ...         1    339         4         0
+2   35    4        2          2  ...         1    330         1         0
+3   30    4        1          2  ...         4     -1         0         3
+4   59    1        1          1  ...         1     -1         0         3
+
+[5 rows x 16 columns]
+Running Standard Naive Bayes Classification on LabelEncoded
+Confusion Martix for Standard Naive Bayes Classification model on LabelEncoded
+[[709  98]
+ [ 54  44]]
+Training Accuracy for Standard Naive Bayes Classification Model on LabelEncoded
+0.8387721238938053
+Training Log loss for Standard Naive Bayes Classification Model on LabelEncoded
+5.568689850482951
+Accuracy for Standard Naive Bayes Classification Model on LabelEncoded
+0.8320441988950277
+Log loss for Standard Naive Bayes Classification Model on LabelEncoded
+5.801074444833793
+Classification Report for Standard Naive Bayes Classification Model on LabelEncoded
+              precision    recall  f1-score   support
+
+           0       0.93      0.88      0.90       807
+           1       0.31      0.45      0.37        98
+
+    accuracy                           0.83       905
+   macro avg       0.62      0.66      0.63       905
+weighted avg       0.86      0.83      0.85       905
+
+AUC: 0.81
+   job  marital  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0   10        1  ...                      0                      0
+1    7        1  ...                      0                      0
+2    4        2  ...                      0                      0
+3    4        1  ...                      0                      0
+4    1        1  ...                      0                      0
+
+[5 rows x 37 columns]
+Running Standard Naive Bayes Classification on LabelEncoded_Binning
+Confusion Martix for Standard Naive Bayes Classification model on LabelEncoded_Binning
+[[ 34 773]
+ [  2  96]]
+Training Accuracy for Standard Naive Bayes Classification Model on LabelEncoded_Binning
+0.1609513274336283
+Training Log loss for Standard Naive Bayes Classification Model on LabelEncoded_Binning
+28.980384281740896
+Accuracy for Standard Naive Bayes Classification Model on LabelEncoded_Binning
+0.143646408839779
+Log loss for Standard Naive Bayes Classification Model on LabelEncoded_Binning
+29.578088171126318
+Classification Report for Standard Naive Bayes Classification Model on LabelEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.94      0.04      0.08       807
+           1       0.11      0.98      0.20        98
+
+    accuracy                           0.14       905
+   macro avg       0.53      0.51      0.14       905
+weighted avg       0.85      0.14      0.09       905
+
+AUC: 0.73
+   job  marital  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0   10        1  ...                      0                      0
+1    7        1  ...                      0                      0
+2    4        2  ...                      0                      0
+3    4        1  ...                      0                      0
+4    1        1  ...                      0                      0
+
+[5 rows x 37 columns]
+Running Standard Naive Bayes Classification on LabelEncoded_Binning_SMOTE
+Confusion Martix for Standard Naive Bayes Classification model on LabelEncoded_Binning_SMOTE
+[[ 93 714]
+ [  9  89]]
+Training Accuracy for Standard Naive Bayes Classification Model on LabelEncoded_Binning_SMOTE
+0.5411838396492327
+Training Log loss for Standard Naive Bayes Classification Model on LabelEncoded_Binning_SMOTE
+15.847307623445543
+Accuracy for Standard Naive Bayes Classification Model on LabelEncoded_Binning_SMOTE
+0.2011049723756906
+Log loss for Standard Naive Bayes Classification Model on LabelEncoded_Binning_SMOTE
+27.59348756473545
+Classification Report for Standard Naive Bayes Classification Model on LabelEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.91      0.12      0.20       807
+           1       0.11      0.91      0.20        98
+
+    accuracy                           0.20       905
+   macro avg       0.51      0.51      0.20       905
+weighted avg       0.83      0.20      0.20       905
+
+AUC: 0.71
+
+Process finished with exit code 0
