@@ -48,7 +48,7 @@ def run_model(X, y, model_name, df_handler, perform_smote=False):
                   metrics=['accuracy'])
     history = model.fit(X_train, y_train, epochs=45)
     score = model.evaluate(X_test, y_test, verbose=0)
-    print(model_name + ' Model Training Score : ' + str(score))
+    print(model_name + ' Model Testing Score : ' + str(score))
     plt.plot(np.arange(0, len(history.history['loss'])), history.history['loss'])
     plt.title("Loss")
     plt.grid()
