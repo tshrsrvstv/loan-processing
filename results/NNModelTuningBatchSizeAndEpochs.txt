@@ -1,0 +1,17 @@
+Best: 0.906237 using {'batch_size': 50, 'epochs': 100}
+0.826519 (0.047157) with: {'batch_size': 20, 'epochs': 10}
+0.883840 (0.044411) with: {'batch_size': 20, 'epochs': 50}
+0.902477 (0.046688) with: {'batch_size': 20, 'epochs': 90}
+0.902479 (0.050853) with: {'batch_size': 20, 'epochs': 100}
+0.831363 (0.030969) with: {'batch_size': 50, 'epochs': 10}
+0.877730 (0.044760) with: {'batch_size': 50, 'epochs': 50}
+0.901227 (0.050529) with: {'batch_size': 50, 'epochs': 90}
+0.906237 (0.049460) with: {'batch_size': 50, 'epochs': 100}
+0.824169 (0.059006) with: {'batch_size': 80, 'epochs': 10}
+0.870069 (0.056818) with: {'batch_size': 80, 'epochs': 50}
+0.900288 (0.052351) with: {'batch_size': 80, 'epochs': 90}
+0.897001 (0.054430) with: {'batch_size': 80, 'epochs': 100}
+0.828107 (0.066964) with: {'batch_size': 110, 'epochs': 10}
+0.869600 (0.058742) with: {'batch_size': 110, 'epochs': 50}
+0.894962 (0.049183) with: {'batch_size': 110, 'epochs': 90}
+0.892930 (0.053136) with: {'batch_size': 110, 'epochs': 100}

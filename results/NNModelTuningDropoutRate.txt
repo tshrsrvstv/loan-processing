@@ -1,0 +1,11 @@
+Best: 0.911093 using {'dropout_rate': 0.1}
+0.903411 (0.042093) with: {'dropout_rate': 0.0}
+0.911093 (0.051788) with: {'dropout_rate': 0.1}
+0.892140 (0.046007) with: {'dropout_rate': 0.2}
+0.889955 (0.056482) with: {'dropout_rate': 0.3}
+0.883059 (0.047332) with: {'dropout_rate': 0.4}
+0.858307 (0.043325) with: {'dropout_rate': 0.5}
+0.862701 (0.048567) with: {'dropout_rate': 0.6}
+0.852057 (0.052998) with: {'dropout_rate': 0.7}
+0.849399 (0.057664) with: {'dropout_rate': 0.8}
+0.780102 (0.058693) with: {'dropout_rate': 0.9}

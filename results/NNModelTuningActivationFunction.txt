@@ -1,0 +1,9 @@
+Best: 0.905138 using {'activation': 'relu'}
+0.100313 (0.118873) with: {'activation': 'softmax'}
+0.838126 (0.061600) with: {'activation': 'softplus'}
+0.874918 (0.048504) with: {'activation': 'softsign'}
+0.905138 (0.045539) with: {'activation': 'relu'}
+0.876335 (0.063613) with: {'activation': 'tanh'}
+0.826067 (0.060508) with: {'activation': 'sigmoid'}
+0.843445 (0.054989) with: {'activation': 'hard_sigmoid'}
+0.796102 (0.050899) with: {'activation': 'linear'}
