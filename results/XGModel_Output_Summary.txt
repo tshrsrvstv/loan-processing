@@ -1,0 +1,858 @@
+C:\Users\e01703\AppData\Local\Continuum\anaconda3\python.exe "C:/AIML/Capstone Project Loan Processing/CodeBase/loan-processing/model/XGBoostModel.py"
+Using TensorFlow backend.
+        age   balance  ...  poutcome_success  poutcome_unknown
+0  0.161765  0.068455  ...                 0                 1
+1  0.205882  0.108750  ...                 0                 0
+2  0.235294  0.062590  ...                 0                 0
+3  0.161765  0.064281  ...                 0                 1
+4  0.588235  0.044469  ...                 0                 1
+
+[5 rows x 51 columns]
+Index(['age', 'balance', 'day', 'duration', 'campaign', 'pdays', 'previous',
+       'job_admin.', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid',
+       'job_management', 'job_retired', 'job_self-employed', 'job_services',
+       'job_student', 'job_technician', 'job_unemployed', 'job_unknown',
+       'marital_divorced', 'marital_married', 'marital_single',
+       'education_primary', 'education_secondary', 'education_tertiary',
+       'education_unknown', 'default_no', 'default_yes', 'housing_no',
+       'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular',
+       'contact_telephone', 'contact_unknown', 'month_apr', 'month_aug',
+       'month_dec', 'month_feb', 'month_jan', 'month_jul', 'month_jun',
+       'month_mar', 'month_may', 'month_nov', 'month_oct', 'month_sep',
+       'poutcome_failure', 'poutcome_other', 'poutcome_success',
+       'poutcome_unknown'],
+      dtype='object')
+Running Standard XGBoost Classification on DummyEncoded_MinMaxScaling
+Confusion Martix for Standard XGBoost Classification model on DummyEncoded_MinMaxScaling
+[[785  22]
+ [ 70  28]]
+Training Accuracy for Standard XGBoost Classification Model on DummyEncoded_MinMaxScaling
+0.9280973451327433
+Training Log loss for Standard XGBoost Classification Model on DummyEncoded_MinMaxScaling
+2.4834383426373217
+Accuracy for Standard XGBoost Classification Model on DummyEncoded_MinMaxScaling
+0.8983425414364641
+Log loss for Standard XGBoost Classification Model on DummyEncoded_MinMaxScaling
+3.5111436679284505
+Classification Report for Standard XGBoost Classification Model on DummyEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.92      0.97      0.94       807
+           1       0.56      0.29      0.38        98
+
+    accuracy                           0.90       905
+   macro avg       0.74      0.63      0.66       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.92
+Running RandomizedSearch XGBoost Classification on DummyEncoded_MinMaxScaling
+Best min_child_weight: 5
+Best gamma: 5
+Best subsample: 0.8
+Best colsample_bytree: 0.8
+Best max_depth: 5
+Confusion Martix for Best Randomized XGBoost Classification model on DummyEncoded_MinMaxScaling
+[[780  27]
+ [ 67  31]]
+Training Accuracy for Best Randomized XGBoost Classification Model on DummyEncoded_MinMaxScaling
+0.9217367256637168
+Training Log Loss for Best Randomized XGBoost Classification Model on DummyEncoded_MinMaxScaling
+2.70313011538048
+Accuracy for Best Randomized XGBoost Classification Model on DummyEncoded_MinMaxScaling
+0.8961325966850828
+Log Loss for Best Randomized XGBoost Classification Model on DummyEncoded_MinMaxScaling
+3.5874768732068723
+Classification Report for Randomized XGBoost Classification Model on DummyEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.92      0.97      0.94       807
+           1       0.53      0.32      0.40        98
+
+    accuracy                           0.90       905
+   macro avg       0.73      0.64      0.67       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.92
+        age   balance  ...  poutcome_success  poutcome_unknown
+0  0.161765  0.068455  ...                 0                 1
+1  0.205882  0.108750  ...                 0                 0
+2  0.235294  0.062590  ...                 0                 0
+3  0.161765  0.064281  ...                 0                 1
+4  0.588235  0.044469  ...                 0                 1
+
+[5 rows x 51 columns]
+Index(['age', 'balance', 'day', 'duration', 'campaign', 'pdays', 'previous',
+       'job_admin.', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid',
+       'job_management', 'job_retired', 'job_self-employed', 'job_services',
+       'job_student', 'job_technician', 'job_unemployed', 'job_unknown',
+       'marital_divorced', 'marital_married', 'marital_single',
+       'education_primary', 'education_secondary', 'education_tertiary',
+       'education_unknown', 'default_no', 'default_yes', 'housing_no',
+       'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular',
+       'contact_telephone', 'contact_unknown', 'month_apr', 'month_aug',
+       'month_dec', 'month_feb', 'month_jan', 'month_jul', 'month_jun',
+       'month_mar', 'month_may', 'month_nov', 'month_oct', 'month_sep',
+       'poutcome_failure', 'poutcome_other', 'poutcome_success',
+       'poutcome_unknown'],
+      dtype='object')
+Running Standard XGBoost Classification on DummyEncoded_MinMaxScaling_SMOTE
+Confusion Martix for Standard XGBoost Classification model on DummyEncoded_MinMaxScaling_SMOTE
+[[725  82]
+ [ 32  66]]
+Training Accuracy for Standard XGBoost Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+0.9350140933291575
+Training Log loss for Standard XGBoost Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+2.24456625418412
+Accuracy for Standard XGBoost Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+0.8740331491712707
+Log loss for Standard XGBoost Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+4.3508133436564576
+Classification Report for Standard XGBoost Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.96      0.90      0.93       807
+           1       0.45      0.67      0.54        98
+
+    accuracy                           0.87       905
+   macro avg       0.70      0.79      0.73       905
+weighted avg       0.90      0.87      0.88       905
+
+AUC: 0.91
+Running RandomizedSearch XGBoost Classification on DummyEncoded_MinMaxScaling_SMOTE
+Best min_child_weight: 5
+Best gamma: 1.5
+Best subsample: 1.0
+Best colsample_bytree: 0.6
+Best max_depth: 5
+Confusion Martix for Best Randomized XGBoost Classification model on DummyEncoded_MinMaxScaling_SMOTE
+[[749  58]
+ [ 42  56]]
+Training Accuracy for Best Randomized XGBoost Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+0.9622611963670529
+Training Log Loss for Best Randomized XGBoost Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+1.3034685027304784
+Accuracy for Best Randomized XGBoost Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+0.8895027624309392
+Log Loss for Best Randomized XGBoost Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+3.816490625571293
+Classification Report for Randomized XGBoost Classification Model on DummyEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.95      0.93      0.94       807
+           1       0.49      0.57      0.53        98
+
+    accuracy                           0.89       905
+   macro avg       0.72      0.75      0.73       905
+weighted avg       0.90      0.89      0.89       905
+
+AUC: 0.91
+   age  balance  day  ...  poutcome_other  poutcome_success  poutcome_unknown
+0   30     1787   19  ...               0                 0                 1
+1   33     4789   11  ...               0                 0                 0
+2   35     1350   16  ...               0                 0                 0
+3   30     1476    3  ...               0                 0                 1
+4   59        0    5  ...               0                 0                 1
+
+[5 rows x 51 columns]
+Index(['age', 'balance', 'day', 'duration', 'campaign', 'pdays', 'previous',
+       'job_admin.', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid',
+       'job_management', 'job_retired', 'job_self-employed', 'job_services',
+       'job_student', 'job_technician', 'job_unemployed', 'job_unknown',
+       'marital_divorced', 'marital_married', 'marital_single',
+       'education_primary', 'education_secondary', 'education_tertiary',
+       'education_unknown', 'default_no', 'default_yes', 'housing_no',
+       'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular',
+       'contact_telephone', 'contact_unknown', 'month_apr', 'month_aug',
+       'month_dec', 'month_feb', 'month_jan', 'month_jul', 'month_jun',
+       'month_mar', 'month_may', 'month_nov', 'month_oct', 'month_sep',
+       'poutcome_failure', 'poutcome_other', 'poutcome_success',
+       'poutcome_unknown'],
+      dtype='object')
+Running Standard XGBoost Classification on DummyEncoded_SMOTE
+Confusion Martix for Standard XGBoost Classification model on DummyEncoded_SMOTE
+[[768  39]
+ [ 51  47]]
+Training Accuracy for Standard XGBoost Classification Model on DummyEncoded_SMOTE
+0.9522392734105857
+Training Log loss for Standard XGBoost Classification Model on DummyEncoded_SMOTE
+1.6496128327159363
+Accuracy for Standard XGBoost Classification Model on DummyEncoded_SMOTE
+0.9005524861878453
+Log loss for Standard XGBoost Classification Model on DummyEncoded_SMOTE
+3.434829900377613
+Classification Report for Standard XGBoost Classification Model on DummyEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.94      0.95      0.94       807
+           1       0.55      0.48      0.51        98
+
+    accuracy                           0.90       905
+   macro avg       0.74      0.72      0.73       905
+weighted avg       0.90      0.90      0.90       905
+
+AUC: 0.91
+Running RandomizedSearch XGBoost Classification on DummyEncoded_SMOTE
+Best min_child_weight: 10
+Best gamma: 1.5
+Best subsample: 0.8
+Best colsample_bytree: 0.6
+Best max_depth: 4
+Confusion Martix for Best Randomized XGBoost Classification model on DummyEncoded_SMOTE
+[[771  36]
+ [ 55  43]]
+Training Accuracy for Best Randomized XGBoost Classification Model on DummyEncoded_SMOTE
+0.9530222361415597
+Training Log Loss for Best Randomized XGBoost Classification Model on DummyEncoded_SMOTE
+1.6225682546493159
+Accuracy for Best Randomized XGBoost Classification Model on DummyEncoded_SMOTE
+0.8994475138121547
+Log Loss for Best Randomized XGBoost Classification Model on DummyEncoded_SMOTE
+3.4729916435849275
+Classification Report for Randomized XGBoost Classification Model on DummyEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.93      0.96      0.94       807
+           1       0.54      0.44      0.49        98
+
+    accuracy                           0.90       905
+   macro avg       0.74      0.70      0.72       905
+weighted avg       0.89      0.90      0.89       905
+
+AUC: 0.91
+   age  balance  day  ...  poutcome_other  poutcome_success  poutcome_unknown
+0   30     1787   19  ...               0                 0                 1
+1   33     4789   11  ...               0                 0                 0
+2   35     1350   16  ...               0                 0                 0
+3   30     1476    3  ...               0                 0                 1
+4   59        0    5  ...               0                 0                 1
+
+[5 rows x 51 columns]
+Index(['age', 'balance', 'day', 'duration', 'campaign', 'pdays', 'previous',
+       'job_admin.', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid',
+       'job_management', 'job_retired', 'job_self-employed', 'job_services',
+       'job_student', 'job_technician', 'job_unemployed', 'job_unknown',
+       'marital_divorced', 'marital_married', 'marital_single',
+       'education_primary', 'education_secondary', 'education_tertiary',
+       'education_unknown', 'default_no', 'default_yes', 'housing_no',
+       'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular',
+       'contact_telephone', 'contact_unknown', 'month_apr', 'month_aug',
+       'month_dec', 'month_feb', 'month_jan', 'month_jul', 'month_jun',
+       'month_mar', 'month_may', 'month_nov', 'month_oct', 'month_sep',
+       'poutcome_failure', 'poutcome_other', 'poutcome_success',
+       'poutcome_unknown'],
+      dtype='object')
+Running Standard XGBoost Classification on DummyEncoded
+Confusion Martix for Standard XGBoost Classification model on DummyEncoded
+[[785  22]
+ [ 70  28]]
+Training Accuracy for Standard XGBoost Classification Model on DummyEncoded
+0.9280973451327433
+Training Log loss for Standard XGBoost Classification Model on DummyEncoded
+2.4834383426373217
+Accuracy for Standard XGBoost Classification Model on DummyEncoded
+0.8983425414364641
+Log loss for Standard XGBoost Classification Model on DummyEncoded
+3.5111436679284505
+Classification Report for Standard XGBoost Classification Model on DummyEncoded
+              precision    recall  f1-score   support
+
+           0       0.92      0.97      0.94       807
+           1       0.56      0.29      0.38        98
+
+    accuracy                           0.90       905
+   macro avg       0.74      0.63      0.66       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.92
+Running RandomizedSearch XGBoost Classification on DummyEncoded
+Best min_child_weight: 5
+Best gamma: 5
+Best subsample: 0.8
+Best colsample_bytree: 0.8
+Best max_depth: 5
+Confusion Martix for Best Randomized XGBoost Classification model on DummyEncoded
+[[780  27]
+ [ 67  31]]
+Training Accuracy for Best Randomized XGBoost Classification Model on DummyEncoded
+0.9217367256637168
+Training Log Loss for Best Randomized XGBoost Classification Model on DummyEncoded
+2.70313011538048
+Accuracy for Best Randomized XGBoost Classification Model on DummyEncoded
+0.8961325966850828
+Log Loss for Best Randomized XGBoost Classification Model on DummyEncoded
+3.5874768732068723
+Classification Report for Randomized XGBoost Classification Model on DummyEncoded
+              precision    recall  f1-score   support
+
+           0       0.92      0.97      0.94       807
+           1       0.53      0.32      0.40        98
+
+    accuracy                           0.90       905
+   macro avg       0.73      0.64      0.67       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.92
+   job_admin.  job_blue-collar  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0           0                0  ...                      0                      0
+1           0                0  ...                      0                      0
+2           0                0  ...                      0                      0
+3           0                0  ...                      0                      0
+4           0                1  ...                      0                      0
+
+[5 rows x 72 columns]
+Index(['job_admin.', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid',
+       'job_management', 'job_retired', 'job_self-employed', 'job_services',
+       'job_student', 'job_technician', 'job_unemployed', 'job_unknown',
+       'marital_divorced', 'marital_married', 'marital_single',
+       'education_primary', 'education_secondary', 'education_tertiary',
+       'education_unknown', 'default_no', 'default_yes', 'housing_no',
+       'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular',
+       'contact_telephone', 'contact_unknown', 'month_apr', 'month_aug',
+       'month_dec', 'month_feb', 'month_jan', 'month_jul', 'month_jun',
+       'month_mar', 'month_may', 'month_nov', 'month_oct', 'month_sep',
+       'poutcome_failure', 'poutcome_other', 'poutcome_success',
+       'poutcome_unknown', 'age_$18.9# 36.0@', 'age_$36.0# 53.0@',
+       'age_$53.0# 70.0@', 'age_$70.0# 87.0@', 'balance_$-3313.1# 15312.2@',
+       'balance_$15312.2# 33937.5@', 'balance_$33937.5# 52562.8@',
+       'balance_$52562.8# 71188.0@', 'day_$0.9# 8.5@', 'day_$8.5# 16.0@',
+       'day_$16.0# 23.5@', 'day_$23.5# 31.0@', 'duration_$3.9# 759.2@',
+       'duration_$759.2# 1514.5@', 'duration_$1514.5# 2269.8@',
+       'duration_$2269.8# 3025.0@', 'campaign_$0.9# 13.2@',
+       'campaign_$13.2# 25.5@', 'campaign_$25.5# 37.8@',
+       'campaign_$37.8# 50.0@', 'pdays_$-1.1# 217.0@', 'pdays_$217.0# 435.0@',
+       'pdays_$435.0# 653.0@', 'pdays_$653.0# 871.0@', 'previous_$-0.1# 6.2@',
+       'previous_$6.2# 12.5@', 'previous_$12.5# 18.8@',
+       'previous_$18.8# 25.0@'],
+      dtype='object')
+Running Standard XGBoost Classification on DummyEncoded_Binning
+Confusion Martix for Standard XGBoost Classification model on DummyEncoded_Binning
+[[788  19]
+ [ 70  28]]
+Training Accuracy for Standard XGBoost Classification Model on DummyEncoded_Binning
+0.9173119469026548
+Training Log loss for Standard XGBoost Classification Model on DummyEncoded_Binning
+2.8559519159259827
+Accuracy for Standard XGBoost Classification Model on DummyEncoded_Binning
+0.901657458563536
+Log loss for Standard XGBoost Classification Model on DummyEncoded_Binning
+3.3966478359096404
+Classification Report for Standard XGBoost Classification Model on DummyEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.92      0.98      0.95       807
+           1       0.60      0.29      0.39        98
+
+    accuracy                           0.90       905
+   macro avg       0.76      0.63      0.67       905
+weighted avg       0.88      0.90      0.89       905
+
+AUC: 0.83
+Running RandomizedSearch XGBoost Classification on DummyEncoded_Binning
+Best min_child_weight: 5
+Best gamma: 5
+Best subsample: 0.8
+Best colsample_bytree: 0.8
+Best max_depth: 5
+Confusion Martix for Best Randomized XGBoost Classification model on DummyEncoded_Binning
+[[790  17]
+ [ 72  26]]
+Training Accuracy for Best Randomized XGBoost Classification Model on DummyEncoded_Binning
+0.9056969026548672
+Training Log Loss for Best Randomized XGBoost Classification Model on DummyEncoded_Binning
+3.2571273024627256
+Accuracy for Best Randomized XGBoost Classification Model on DummyEncoded_Binning
+0.901657458563536
+Log Loss for Best Randomized XGBoost Classification Model on DummyEncoded_Binning
+3.3966460688434967
+Classification Report for Randomized XGBoost Classification Model on DummyEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.92      0.98      0.95       807
+           1       0.60      0.27      0.37        98
+
+    accuracy                           0.90       905
+   macro avg       0.76      0.62      0.66       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.83
+   job_admin.  job_blue-collar  ...  previous_$12.5# 18.8@  previous_$18.8# 25.0@
+0           0                0  ...                      0                      0
+1           0                0  ...                      0                      0
+2           0                0  ...                      0                      0
+3           0                0  ...                      0                      0
+4           0                1  ...                      0                      0
+
+[5 rows x 72 columns]
+Index(['job_admin.', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid',
+       'job_management', 'job_retired', 'job_self-employed', 'job_services',
+       'job_student', 'job_technician', 'job_unemployed', 'job_unknown',
+       'marital_divorced', 'marital_married', 'marital_single',
+       'education_primary', 'education_secondary', 'education_tertiary',
+       'education_unknown', 'default_no', 'default_yes', 'housing_no',
+       'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular',
+       'contact_telephone', 'contact_unknown', 'month_apr', 'month_aug',
+       'month_dec', 'month_feb', 'month_jan', 'month_jul', 'month_jun',
+       'month_mar', 'month_may', 'month_nov', 'month_oct', 'month_sep',
+       'poutcome_failure', 'poutcome_other', 'poutcome_success',
+       'poutcome_unknown', 'age_$18.9# 36.0@', 'age_$36.0# 53.0@',
+       'age_$53.0# 70.0@', 'age_$70.0# 87.0@', 'balance_$-3313.1# 15312.2@',
+       'balance_$15312.2# 33937.5@', 'balance_$33937.5# 52562.8@',
+       'balance_$52562.8# 71188.0@', 'day_$0.9# 8.5@', 'day_$8.5# 16.0@',
+       'day_$16.0# 23.5@', 'day_$23.5# 31.0@', 'duration_$3.9# 759.2@',
+       'duration_$759.2# 1514.5@', 'duration_$1514.5# 2269.8@',
+       'duration_$2269.8# 3025.0@', 'campaign_$0.9# 13.2@',
+       'campaign_$13.2# 25.5@', 'campaign_$25.5# 37.8@',
+       'campaign_$37.8# 50.0@', 'pdays_$-1.1# 217.0@', 'pdays_$217.0# 435.0@',
+       'pdays_$435.0# 653.0@', 'pdays_$653.0# 871.0@', 'previous_$-0.1# 6.2@',
+       'previous_$6.2# 12.5@', 'previous_$12.5# 18.8@',
+       'previous_$18.8# 25.0@'],
+      dtype='object')
+Running Standard XGBoost Classification on DummyEncoded_Binning_SMOTE
+Confusion Martix for Standard XGBoost Classification model on DummyEncoded_Binning_SMOTE
+[[778  29]
+ [ 63  35]]
+Training Accuracy for Standard XGBoost Classification Model on DummyEncoded_Binning_SMOTE
+0.9242092076417162
+Training Log loss for Standard XGBoost Classification Model on DummyEncoded_Binning_SMOTE
+2.6177324990456454
+Accuracy for Standard XGBoost Classification Model on DummyEncoded_Binning_SMOTE
+0.8983425414364641
+Log loss for Standard XGBoost Classification Model on DummyEncoded_Binning_SMOTE
+3.511149852659955
+Classification Report for Standard XGBoost Classification Model on DummyEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.93      0.96      0.94       807
+           1       0.55      0.36      0.43        98
+
+    accuracy                           0.90       905
+   macro avg       0.74      0.66      0.69       905
+weighted avg       0.88      0.90      0.89       905
+
+AUC: 0.81
+Running RandomizedSearch XGBoost Classification on DummyEncoded_Binning_SMOTE
+Best min_child_weight: 5
+Best gamma: 1.5
+Best subsample: 1.0
+Best colsample_bytree: 0.6
+Best max_depth: 5
+Confusion Martix for Best Randomized XGBoost Classification model on DummyEncoded_Binning_SMOTE
+[[781  26]
+ [ 69  29]]
+Training Accuracy for Best Randomized XGBoost Classification Model on DummyEncoded_Binning_SMOTE
+0.9365800187911055
+Training Log Loss for Best Randomized XGBoost Classification Model on DummyEncoded_Binning_SMOTE
+2.1904574399242676
+Accuracy for Best Randomized XGBoost Classification Model on DummyEncoded_Binning_SMOTE
+0.8950276243093923
+Log Loss for Best Randomized XGBoost Classification Model on DummyEncoded_Binning_SMOTE
+3.625640383480332
+Classification Report for Randomized XGBoost Classification Model on DummyEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.92      0.97      0.94       807
+           1       0.53      0.30      0.38        98
+
+    accuracy                           0.90       905
+   macro avg       0.72      0.63      0.66       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.82
+        age  job  marital  education  ...  campaign     pdays  previous  poutcome
+0  0.161765   10        1          0  ...  0.000000  0.000000      0.00         3
+1  0.205882    7        1          1  ...  0.000000  0.389908      0.16         0
+2  0.235294    4        2          2  ...  0.000000  0.379587      0.04         0
+3  0.161765    4        1          2  ...  0.061224  0.000000      0.00         3
+4  0.588235    1        1          1  ...  0.000000  0.000000      0.00         3
+
+[5 rows x 16 columns]
+Index(['age', 'job', 'marital', 'education', 'default', 'balance', 'housing',
+       'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays',
+       'previous', 'poutcome'],
+      dtype='object')
+Running Standard XGBoost Classification on LabeEncoded_MinMaxScaling
+Confusion Martix for Standard XGBoost Classification model on LabeEncoded_MinMaxScaling
+[[784  23]
+ [ 71  27]]
+Training Accuracy for Standard XGBoost Classification Model on LabeEncoded_MinMaxScaling
+0.9250553097345132
+Training Log loss for Standard XGBoost Classification Model on LabeEncoded_MinMaxScaling
+2.588507186425018
+Accuracy for Standard XGBoost Classification Model on LabeEncoded_MinMaxScaling
+0.8961325966850828
+Log loss for Standard XGBoost Classification Model on LabeEncoded_MinMaxScaling
+3.5874733390745845
+Classification Report for Standard XGBoost Classification Model on LabeEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.92      0.97      0.94       807
+           1       0.54      0.28      0.36        98
+
+    accuracy                           0.90       905
+   macro avg       0.73      0.62      0.65       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.91
+Running RandomizedSearch XGBoost Classification on LabeEncoded_MinMaxScaling
+Best min_child_weight: 10
+Best gamma: 1
+Best subsample: 0.6
+Best colsample_bytree: 0.6
+Best max_depth: 3
+Confusion Martix for Best Randomized XGBoost Classification model on LabeEncoded_MinMaxScaling
+[[784  23]
+ [ 72  26]]
+Training Accuracy for Best Randomized XGBoost Classification Model on LabeEncoded_MinMaxScaling
+0.9167588495575221
+Training Log Loss for Best Randomized XGBoost Classification Model on LabeEncoded_MinMaxScaling
+2.875060749644339
+Accuracy for Best Randomized XGBoost Classification Model on LabeEncoded_MinMaxScaling
+0.8950276243093923
+Log Loss for Best Randomized XGBoost Classification Model on LabeEncoded_MinMaxScaling
+3.625637732881116
+Classification Report for Randomized XGBoost Classification Model on LabeEncoded_MinMaxScaling
+              precision    recall  f1-score   support
+
+           0       0.92      0.97      0.94       807
+           1       0.53      0.27      0.35        98
+
+    accuracy                           0.90       905
+   macro avg       0.72      0.62      0.65       905
+weighted avg       0.87      0.90      0.88       905
+
+AUC: 0.91
+        age  job  marital  education  ...  campaign     pdays  previous  poutcome
+0  0.161765   10        1          0  ...  0.000000  0.000000      0.00         3
+1  0.205882    7        1          1  ...  0.000000  0.389908      0.16         0
+2  0.235294    4        2          2  ...  0.000000  0.379587      0.04         0
+3  0.161765    4        1          2  ...  0.061224  0.000000      0.00         3
+4  0.588235    1        1          1  ...  0.000000  0.000000      0.00         3
+
+[5 rows x 16 columns]
+Index(['age', 'job', 'marital', 'education', 'default', 'balance', 'housing',
+       'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays',
+       'previous', 'poutcome'],
+      dtype='object')
+Running Standard XGBoost Classification on LabelEncoded_MinMaxScaling_SMOTE
+Confusion Martix for Standard XGBoost Classification model on LabelEncoded_MinMaxScaling_SMOTE
+[[717  90]
+ [ 34  64]]
+Training Accuracy for Standard XGBoost Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+0.9257751331036642
+Training Log loss for Standard XGBoost Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+2.5636698876438806
+Accuracy for Standard XGBoost Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+0.8629834254143647
+Log loss for Standard XGBoost Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+4.732464349986346
+Classification Report for Standard XGBoost Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.95      0.89      0.92       807
+           1       0.42      0.65      0.51        98
+
+    accuracy                           0.86       905
+   macro avg       0.69      0.77      0.71       905
+weighted avg       0.90      0.86      0.88       905
+
+AUC: 0.89
+Running RandomizedSearch XGBoost Classification on LabelEncoded_MinMaxScaling_SMOTE
+Best min_child_weight: 5
+Best gamma: 1.5
+Best subsample: 1.0
+Best colsample_bytree: 0.6
+Best max_depth: 5
+Confusion Martix for Best Randomized XGBoost Classification model on LabelEncoded_MinMaxScaling_SMOTE
+[[739  68]
+ [ 37  61]]
+Training Accuracy for Best Randomized XGBoost Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+0.95662386470404
+Training Log Loss for Best Randomized XGBoost Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+1.4981756665582164
+Accuracy for Best Randomized XGBoost Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+0.8839779005524862
+Log Loss for Best Randomized XGBoost Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+4.007321429934669
+Classification Report for Randomized XGBoost Classification Model on LabelEncoded_MinMaxScaling_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.95      0.92      0.93       807
+           1       0.47      0.62      0.54        98
+
+    accuracy                           0.88       905
+   macro avg       0.71      0.77      0.74       905
+weighted avg       0.90      0.88      0.89       905
+
+AUC: 0.90
+   age  job  marital  education  ...  campaign  pdays  previous  poutcome
+0   30   10        1          0  ...         1     -1         0         3
+1   33    7        1          1  ...         1    339         4         0
+2   35    4        2          2  ...         1    330         1         0
+3   30    4        1          2  ...         4     -1         0         3
+4   59    1        1          1  ...         1     -1         0         3
+
+[5 rows x 16 columns]
+Index(['age', 'job', 'marital', 'education', 'default', 'balance', 'housing',
+       'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays',
+       'previous', 'poutcome'],
+      dtype='object')
+Running Standard XGBoost Classification on LabelEncoded_SMOTE
+Confusion Martix for Standard XGBoost Classification model on LabelEncoded_SMOTE
+[[710  97]
+ [ 36  62]]
+Training Accuracy for Standard XGBoost Classification Model on LabelEncoded_SMOTE
+0.9154400250548074
+Training Log loss for Standard XGBoost Classification Model on LabelEncoded_SMOTE
+2.9206393862204414
+Accuracy for Standard XGBoost Classification Model on LabelEncoded_SMOTE
+0.8530386740331491
+Log loss for Standard XGBoost Classification Model on LabelEncoded_SMOTE
+5.07595007897663
+Classification Report for Standard XGBoost Classification Model on LabelEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.95      0.88      0.91       807
+           1       0.39      0.63      0.48        98
+
+    accuracy                           0.85       905
+   macro avg       0.67      0.76      0.70       905
+weighted avg       0.89      0.85      0.87       905
+
+AUC: 0.88
+Running RandomizedSearch XGBoost Classification on LabelEncoded_SMOTE
+Best min_child_weight: 5
+Best gamma: 1.5
+Best subsample: 1.0
+Best colsample_bytree: 0.6
+Best max_depth: 5
+Confusion Martix for Best Randomized XGBoost Classification model on LabelEncoded_SMOTE
+[[725  82]
+ [ 36  62]]
+Training Accuracy for Best Randomized XGBoost Classification Model on LabelEncoded_SMOTE
+0.9530222361415597
+Training Log Loss for Best Randomized XGBoost Classification Model on LabelEncoded_SMOTE
+1.6225773950521354
+Accuracy for Best Randomized XGBoost Classification Model on LabelEncoded_SMOTE
+0.8696132596685083
+Log Loss for Best Randomized XGBoost Classification Model on LabelEncoded_SMOTE
+4.5034709188825826
+Classification Report for Randomized XGBoost Classification Model on LabelEncoded_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.95      0.90      0.92       807
+           1       0.43      0.63      0.51        98
+
+    accuracy                           0.87       905
+   macro avg       0.69      0.77      0.72       905
+weighted avg       0.90      0.87      0.88       905
+
+AUC: 0.89
+   age  job  marital  education  ...  campaign  pdays  previous  poutcome
+0   30   10        1          0  ...         1     -1         0         3
+1   33    7        1          1  ...         1    339         4         0
+2   35    4        2          2  ...         1    330         1         0
+3   30    4        1          2  ...         4     -1         0         3
+4   59    1        1          1  ...         1     -1         0         3
+
+[5 rows x 16 columns]
+Index(['age', 'job', 'marital', 'education', 'default', 'balance', 'housing',
+       'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays',
+       'previous', 'poutcome'],
+      dtype='object')
+Running Standard XGBoost Classification on LabelEncoded
+Confusion Martix for Standard XGBoost Classification model on LabelEncoded
+[[784  23]
+ [ 71  27]]
+Training Accuracy for Standard XGBoost Classification Model on LabelEncoded
+0.9250553097345132
+Training Log loss for Standard XGBoost Classification Model on LabelEncoded
+2.588507186425018
+Accuracy for Standard XGBoost Classification Model on LabelEncoded
+0.8961325966850828
+Log loss for Standard XGBoost Classification Model on LabelEncoded
+3.5874733390745845
+Classification Report for Standard XGBoost Classification Model on LabelEncoded
+              precision    recall  f1-score   support
+
+           0       0.92      0.97      0.94       807
+           1       0.54      0.28      0.36        98
+
+    accuracy                           0.90       905
+   macro avg       0.73      0.62      0.65       905
+weighted avg       0.88      0.90      0.88       905
+
+AUC: 0.91
+Running RandomizedSearch XGBoost Classification on LabelEncoded
+Best min_child_weight: 10
+Best gamma: 1
+Best subsample: 0.6
+Best colsample_bytree: 0.6
+Best max_depth: 3
+Confusion Martix for Best Randomized XGBoost Classification model on LabelEncoded
+[[784  23]
+ [ 72  26]]
+Training Accuracy for Best Randomized XGBoost Classification Model on LabelEncoded
+0.9170353982300885
+Training Log Loss for Best Randomized XGBoost Classification Model on LabelEncoded
+2.865508875752652
+Accuracy for Best Randomized XGBoost Classification Model on LabelEncoded
+0.8950276243093923
+Log Loss for Best Randomized XGBoost Classification Model on LabelEncoded
+3.625637732881116
+Classification Report for Randomized XGBoost Classification Model on LabelEncoded
+              precision    recall  f1-score   support
+
+           0       0.92      0.97      0.94       807
+           1       0.53      0.27      0.35        98
+
+    accuracy                           0.90       905
+   macro avg       0.72      0.62      0.65       905
+weighted avg       0.87      0.90      0.88       905
+
+AUC: 0.91
+   job  marital  ...  previous_(12.5, 18.8]  previous_(18.8, 25.0]
+0   10        1  ...                      0                      0
+1    7        1  ...                      0                      0
+2    4        2  ...                      0                      0
+3    4        1  ...                      0                      0
+4    1        1  ...                      0                      0
+
+[5 rows x 37 columns]
+Index(['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact',
+       'month', 'poutcome', 'age_$18.9# 36.0@', 'age_$36.0# 53.0@',
+       'age_$53.0# 70.0@', 'age_$70.0# 87.0@', 'balance_$-3313.1# 15312.2@',
+       'balance_$15312.2# 33937.5@', 'balance_$33937.5# 52562.8@',
+       'balance_$52562.8# 71188.0@', 'day_$0.9# 8.5@', 'day_$8.5# 16.0@',
+       'day_$16.0# 23.5@', 'day_$23.5# 31.0@', 'duration_$3.9# 759.2@',
+       'duration_$759.2# 1514.5@', 'duration_$1514.5# 2269.8@',
+       'duration_$2269.8# 3025.0@', 'campaign_$0.9# 13.2@',
+       'campaign_$13.2# 25.5@', 'campaign_$25.5# 37.8@',
+       'campaign_$37.8# 50.0@', 'pdays_$-1.1# 217.0@', 'pdays_$217.0# 435.0@',
+       'pdays_$435.0# 653.0@', 'pdays_$653.0# 871.0@', 'previous_$-0.1# 6.2@',
+       'previous_$6.2# 12.5@', 'previous_$12.5# 18.8@',
+       'previous_$18.8# 25.0@'],
+      dtype='object')
+Running Standard XGBoost Classification on LabelEncoded_Binning
+Confusion Martix for Standard XGBoost Classification model on LabelEncoded_Binning
+[[786  21]
+ [ 74  24]]
+Training Accuracy for Standard XGBoost Classification Model on LabelEncoded_Binning
+0.9128871681415929
+Training Log loss for Standard XGBoost Classification Model on LabelEncoded_Binning
+3.0087803502997224
+Accuracy for Standard XGBoost Classification Model on LabelEncoded_Binning
+0.8950276243093923
+Log loss for Standard XGBoost Classification Model on LabelEncoded_Binning
+3.625635965814972
+Classification Report for Standard XGBoost Classification Model on LabelEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.91      0.97      0.94       807
+           1       0.53      0.24      0.34        98
+
+    accuracy                           0.90       905
+   macro avg       0.72      0.61      0.64       905
+weighted avg       0.87      0.90      0.88       905
+
+AUC: 0.82
+Running RandomizedSearch XGBoost Classification on LabelEncoded_Binning
+Best min_child_weight: 10
+Best gamma: 1
+Best subsample: 0.6
+Best colsample_bytree: 0.6
+Best max_depth: 3
+Confusion Martix for Best Randomized XGBoost Classification model on LabelEncoded_Binning
+[[788  19]
+ [ 75  23]]
+Training Accuracy for Best Randomized XGBoost Classification Model on LabelEncoded_Binning
+0.9065265486725663
+Training Log Loss for Best Randomized XGBoost Classification Model on LabelEncoded_Binning
+3.228469690639193
+Accuracy for Best Randomized XGBoost Classification Model on LabelEncoded_Binning
+0.8961325966850828
+Log Loss for Best Randomized XGBoost Classification Model on LabelEncoded_Binning
+3.5874698049422964
+Classification Report for Randomized XGBoost Classification Model on LabelEncoded_Binning
+              precision    recall  f1-score   support
+
+           0       0.91      0.98      0.94       807
+           1       0.55      0.23      0.33        98
+
+    accuracy                           0.90       905
+   macro avg       0.73      0.61      0.64       905
+weighted avg       0.87      0.90      0.88       905
+
+AUC: 0.82
+   job  marital  ...  previous_$12.5# 18.8@  previous_$18.8# 25.0@
+0   10        1  ...                      0                      0
+1    7        1  ...                      0                      0
+2    4        2  ...                      0                      0
+3    4        1  ...                      0                      0
+4    1        1  ...                      0                      0
+
+[5 rows x 37 columns]
+Index(['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact',
+       'month', 'poutcome', 'age_$18.9# 36.0@', 'age_$36.0# 53.0@',
+       'age_$53.0# 70.0@', 'age_$70.0# 87.0@', 'balance_$-3313.1# 15312.2@',
+       'balance_$15312.2# 33937.5@', 'balance_$33937.5# 52562.8@',
+       'balance_$52562.8# 71188.0@', 'day_$0.9# 8.5@', 'day_$8.5# 16.0@',
+       'day_$16.0# 23.5@', 'day_$23.5# 31.0@', 'duration_$3.9# 759.2@',
+       'duration_$759.2# 1514.5@', 'duration_$1514.5# 2269.8@',
+       'duration_$2269.8# 3025.0@', 'campaign_$0.9# 13.2@',
+       'campaign_$13.2# 25.5@', 'campaign_$25.5# 37.8@',
+       'campaign_$37.8# 50.0@', 'pdays_$-1.1# 217.0@', 'pdays_$217.0# 435.0@',
+       'pdays_$435.0# 653.0@', 'pdays_$653.0# 871.0@', 'previous_$-0.1# 6.2@',
+       'previous_$6.2# 12.5@', 'previous_$12.5# 18.8@',
+       'previous_$18.8# 25.0@'],
+      dtype='object')
+Running Standard XGBoost Classification on LabelEncoded_Binning_SMOTE
+Confusion Martix for Standard XGBoost Classification model on LabelEncoded_Binning_SMOTE
+[[751  56]
+ [ 53  45]]
+Training Accuracy for Standard XGBoost Classification Model on LabelEncoded_Binning_SMOTE
+0.9116818039461322
+Training Log loss for Standard XGBoost Classification Model on LabelEncoded_Binning_SMOTE
+3.050421832811041
+Accuracy for Standard XGBoost Classification Model on LabelEncoded_Binning_SMOTE
+0.8795580110497238
+Log loss for Standard XGBoost Classification Model on LabelEncoded_Binning_SMOTE
+4.15996840276393
+Classification Report for Standard XGBoost Classification Model on LabelEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.93      0.93      0.93       807
+           1       0.45      0.46      0.45        98
+
+    accuracy                           0.88       905
+   macro avg       0.69      0.69      0.69       905
+weighted avg       0.88      0.88      0.88       905
+
+AUC: 0.83
+Running RandomizedSearch XGBoost Classification on LabelEncoded_Binning_SMOTE
+Best min_child_weight: 5
+Best gamma: 1.5
+Best subsample: 1.0
+Best colsample_bytree: 0.6
+Best max_depth: 5
+Confusion Martix for Best Randomized XGBoost Classification model on LabelEncoded_Binning_SMOTE
+[[754  53]
+ [ 57  41]]
+Training Accuracy for Best Randomized XGBoost Classification Model on LabelEncoded_Binning_SMOTE
+0.9296899467585343
+Training Log Loss for Best Randomized XGBoost Classification Model on LabelEncoded_Binning_SMOTE
+2.4284386081739457
+Accuracy for Best Randomized XGBoost Classification Model on LabelEncoded_Binning_SMOTE
+0.8784530386740331
+Log Loss for Best Randomized XGBoost Classification Model on LabelEncoded_Binning_SMOTE
+4.198130145971244
+Classification Report for Randomized XGBoost Classification Model on LabelEncoded_Binning_SMOTE
+              precision    recall  f1-score   support
+
+           0       0.93      0.93      0.93       807
+           1       0.44      0.42      0.43        98
+
+    accuracy                           0.88       905
+   macro avg       0.68      0.68      0.68       905
+weighted avg       0.88      0.88      0.88       905
+
+AUC: 0.82
