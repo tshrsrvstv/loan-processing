@@ -1,0 +1,17 @@
+C:\Users\e01703\AppData\Local\Continuum\anaconda3\python.exe "C:/AIML/Capstone Project Loan Processing/CodeBase/loan-processing/final-models/training-codes/RS_LR_LabelEncoded_MinMaxScaling_SMOTE.py"
+Using TensorFlow backend.
+        age  job  marital  education  ...  campaign     pdays  previous  poutcome
+0  0.074627    0        1          1  ...  0.000000  0.369266      0.04         0
+1  0.119403    6        1          1  ...  0.020408  0.000000      0.00         3
+2  0.268657    1        1          1  ...  0.000000  0.000000      0.00         3
+3  0.253731    1        1          1  ...  0.061224  0.000000      0.00         3
+4  0.089552    0        2          2  ...  0.040816  0.103211      0.08         0
+
+[5 rows x 16 columns]
+LogisticRegression(C=70548.02311, class_weight=None, dual=False,
+                   fit_intercept=True, intercept_scaling=1, l1_ratio=None,
+                   max_iter=1000, multi_class='auto', n_jobs=-1, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+
+Process finished with exit code 0
